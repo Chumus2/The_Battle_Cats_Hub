@@ -83,8 +83,6 @@ header {
     left: 50%;
     transform: translateX(-50%);
 
-    width: 95vw;
-    
     background-color: rgb(255, 255, 255);
     border-radius: 0.35rem;
     z-index: 1000;
@@ -109,7 +107,7 @@ header {
 /* || PHONES || */
 @media (max-width: 767px) {
     header {
-        padding: 1rem 1.25rem 1rem 1.25rem;
+        padding: 1rem 1.25rem;
     }
 
     .Header img {
@@ -117,19 +115,37 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        padding: 0.3rem 0.5rem;
         font-size: clamp(1.4rem, 4vw, 1.75rem);
     }
 
     .Dropdown_Menu {
         padding: 0.65rem;
         font-size: clamp(1.2rem, 4vw, 1.55rem);
+        width: 95vw;
     }
 }
 
 /* || TABLETS || */
 @media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 1.25rem 2rem;
+    }
 
+    .Header img {
+        max-height: 2.2rem;
+    }
+
+    .Dropdown_Button {
+        padding: 0.55rem 1rem;
+        font-size: 1.5rem;
+    }
+
+    .Dropdown_Menu {
+        padding: 0.8rem;
+        font-size: 1.4rem;
+        width: 80vw;
+    }
 }
 
 /* || NOTEBOOKS || */
