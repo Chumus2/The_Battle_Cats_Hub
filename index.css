@@ -50,7 +50,6 @@ a {
 header {
     top: 0;
     position: sticky;
-    padding: 1rem 1.25rem 1rem 1.25rem;
     background-color: whitesmoke;
     z-index: 1000;
 }
@@ -64,7 +63,6 @@ header {
 
 .Header img {
     width: auto;
-    max-height: clamp(1.6rem, 6vw, 2.5rem);;
 }
 
 .Dropdown_Button {
@@ -74,8 +72,6 @@ header {
 
     font-family: "Sniglet_Regular";
     text-decoration: none;
-    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-    font-size: clamp(1.4rem, 4vw, 1.75rem);
     cursor: pointer;
 }
 
@@ -88,8 +84,6 @@ header {
     transform: translateX(-50%);
 
     width: 95vw;
-    padding: 0.65rem;
-    font-size: clamp(1.2rem, 4vw, 1.55rem);
     
     background-color: rgb(255, 255, 255);
     border-radius: 0.35rem;
@@ -114,7 +108,23 @@ header {
 
 /* || PHONES || */
 @media (max-width: 767px) {
-    
+    header {
+        padding: 1rem 1.25rem 1rem 1.25rem;
+    }
+
+    .Header img {
+        max-height: clamp(1.6rem, 6vw, 2.5rem);
+    }
+
+    .Dropdown_Button {
+        padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+        font-size: clamp(1.4rem, 4vw, 1.75rem);
+    }
+
+    .Dropdown_Menu {
+        padding: 0.65rem;
+        font-size: clamp(1.2rem, 4vw, 1.55rem);
+    }
 }
 
 /* || TABLETS || */
