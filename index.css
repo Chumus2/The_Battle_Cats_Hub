@@ -1,0 +1,87 @@
+/* || FONTS || */
+
+@font-face {
+    font-family: "Sniglet_Regular";
+    src: url(Assets/Fonts/Sniglet_Regular.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+
+/* || RESETS || */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+:where(img, picture, video, canvas, svg) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+:where(ul ol) {
+    list-style: none;
+}
+
+
+/* || HEADER || */
+
+header {
+    top: 0;
+    position: sticky;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    background-color: bisque;
+}
+
+.Header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header img {
+    width: auto;
+    max-height: 2.5rem;
+}
+
+.Dropdown_Button {
+    appearance: none;
+    border: none;
+    background: none;
+
+    font-family: "Sniglet_Regular";
+    text-decoration: underline;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    font-size: 1.75rem;
+    cursor: pointer;
+}
+
+.Dropdown_Menu {
+    display: none;
+    position: absolute;
+}
+
+.Dropdown_Menu.Active {
+    display: block;
+}
+
+
+/* || MAIN || *
