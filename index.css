@@ -18,8 +18,11 @@
 }
 
 html {
+    font-family: "Sniglet_Regular";
     font-size: 16px;
     line-height: 1.6;
+    color: black;
+    background-color: bisque; 
 }
 
 body {
@@ -34,6 +37,7 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 :where(ul ol) {
@@ -46,8 +50,9 @@ a {
 header {
     top: 0;
     position: sticky;
-    padding: 1rem 1.5rem 1rem 1.5rem;
-    background-color: bisque;
+    padding: 1rem 1.25rem 1rem 1.25rem;
+    background-color: whitesmoke;
+    z-index: 1000;
 }
 
 .Header {
@@ -59,7 +64,7 @@ header {
 
 .Header img {
     width: auto;
-    max-height: 2.5rem;
+    max-height: clamp(1.6rem, 6vw, 2.5rem);;
 }
 
 .Dropdown_Button {
@@ -68,19 +73,68 @@ header {
     background: none;
 
     font-family: "Sniglet_Regular";
-    text-decoration: underline;
+    text-decoration: none;
     padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-    font-size: 1.75rem;
+    font-size: clamp(1.4rem, 4vw, 1.75rem);
     cursor: pointer;
 }
 
 .Dropdown_Menu {
     display: none;
     position: absolute;
+
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 95vw;
+    padding: 0.65rem;
+    font-size: clamp(1.2rem, 4vw, 1.55rem);
+    
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.35rem;
+    z-index: 1000;
+}
+
+.Content_Box {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 .Dropdown_Menu.Active {
     display: block;
+}
+
+.Dropdown_Button.Active {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 3px;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+
 }
 
 
