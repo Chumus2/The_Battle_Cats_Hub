@@ -115,11 +115,11 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.3rem 0.5rem;
         font-size: clamp(1.4rem, 4vw, 1.75rem);
     }
 
     .Dropdown_Menu {
+        top: 170%;
         padding: 0.65rem;
         font-size: clamp(1.2rem, 4vw, 1.55rem);
         width: 95vw;
@@ -137,11 +137,11 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.3rem 1rem;
         font-size: 1.5rem;
     }
 
     .Dropdown_Menu {
+        top: 175%;
         padding: 0.8rem;
         font-size: 1.4rem;
         width: 80vw;
@@ -159,7 +159,6 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.3rem 1rem;
         font-size: 1.75rem;
     }
 
@@ -172,6 +171,7 @@ header {
 
     .Content_Box {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
     }
 }
 
@@ -186,7 +186,6 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.3rem 1rem;
         font-size: 1.75rem;
     }
 
@@ -209,18 +208,17 @@ header {
     }
 
     .Header img {
-        max-height: 3rem;
+        max-height: clamp(3rem, 2vw, 3.6rem);
     }
 
     .Dropdown_Button {
-        padding: 0.5rem 1.2rem;
-        font-size: 2rem;
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem)
     }
 
     .Dropdown_Menu {
         top: 175%;
         padding: 1rem;
-        font-size: 1.7rem;
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
         width: 35vw;
     }
 
