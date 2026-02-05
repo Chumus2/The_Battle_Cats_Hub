@@ -204,7 +204,29 @@ header {
 
 /* || BIG MONITORS || */
 @media (min-width: 1600px) {
+    header {
+        padding: 1.5rem 6rem;
+    }
 
+    .Header img {
+        max-height: 3rem;
+    }
+
+    .Dropdown_Button {
+        padding: 0.5rem 1.2rem;
+        font-size: 2rem;
+    }
+
+    .Dropdown_Menu {
+        top: 175%;
+        padding: 1rem;
+        font-size: 1.7rem;
+        width: 35vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 
