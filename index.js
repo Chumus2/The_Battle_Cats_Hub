@@ -52,6 +52,7 @@ function Change_Language(language) {
     });
 
     localStorage.setItem("language", language);
+    Languages_Menu.classList.remove("Active");
 
 };
 
