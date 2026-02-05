@@ -293,6 +293,20 @@ header {
     .Content_Box {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .Languages_Button {
+        font-size: 1.7rem;
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.9rem;
+        font-size: 1.5rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.45rem;
+    }
 }
 
 /* || BIG MONITORS || */
