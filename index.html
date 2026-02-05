@@ -20,25 +20,40 @@
 
         <div class="Header">
 
-            <nav class="Navigation">
+            <div class="Controls">
 
-                <button class="Dropdown_Button">Content</button>
+                <nav class="Navigation">
+
+                    <button class="Dropdown_Button">Content</button>
+        
+                    <div class="Dropdown_Menu">
+                        
+                        <div class="Content_Box">
+                            <a href="">Overview</a>
+                            <a href="">Developers</a>
+                        </div>
     
-                <div class="Dropdown_Menu">
-                    
-                    <div class="Content_Box">
-                        <a href="">Overview</a>
-                        <a href="">Developers</a>
                     </div>
-
-                </div>
+        
+                </nav>
     
-            </nav>
+                <div class="Languages">
+    
+                    <button class="Languages_Button">Languages</button>
+    
+                    <div class="Languages_Menu">
+                        <button data-lang="En">EN</button>
+                        <button data-lang="Ru">RU</button>
+                    </div>
+    
+                </div>
+
+            </div>
     
             <div class="Ponos_Developers">
     
-                <a href="https://www.ponos.jp/" class="Ponos_Link">
-                    <img src="Assets/Images/Ponos_Logo.svg" alt="">
+                <a href="https://www.ponos.jp/" class="Ponos_Link" target="_blank">
+                    <img src="Assets/Images/Ponos_Logo.svg" alt="Link To A Ponos Official Webpage" loading="lazy">
                 </a>
     
             </div>
@@ -49,11 +64,19 @@
 
     <main>
 
-        
+        <section id="Title">
+
+            <div class="Title_Images">
+
+                <img src="Assets/Images/Background1.gif" alt="Background" loading="lazy">
+
+            </div>
+
+        </section>
 
     </main>
 
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 
 </body>
 
