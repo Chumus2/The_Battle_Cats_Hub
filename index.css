@@ -184,7 +184,7 @@ header {
     }
 
     .Languages_Button {
-        font-size: clamp(1.1rem, 2.5vw, 1.2rem);
+        font-size: clamp(1.3rem, 2.5vw, 1.65rem);
     }
 
     .Languages_Menu button {
@@ -332,6 +332,20 @@ header {
 
     .Content_Box {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Button {
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem);
+    }
+
+    .Languages_Menu {
+        top: 175%;
+        padding: 1rem;
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
+    }
+
+    .Languages_Menu button {
+        font-size: clamp(1.5rem, 1vw, 1.8rem);
     }
 }
 
