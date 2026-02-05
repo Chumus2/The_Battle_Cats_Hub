@@ -137,7 +137,7 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.55rem 1rem;
+        padding: 0.3rem 1rem;
         font-size: 1.5rem;
     }
 
@@ -159,11 +159,12 @@ header {
     }
 
     .Dropdown_Button {
-        padding: 0.6rem 1.2rem;
-        font-size: 1.7rem;
+        padding: 0.3rem 1rem;
+        font-size: 1.75rem;
     }
 
     .Dropdown_Menu {
+        top: 180%;
         padding: 1rem;
         font-size: 1.6rem;
         width: 70vw;
@@ -176,7 +177,29 @@ header {
 
 /* || DESKTOPS || */
 @media (min-width: 1280px) and (max-width: 1599px) {
-    
+    header {
+        padding: 1.75rem 5rem;
+    }
+
+    .Header img {
+        max-height: 3rem;
+    }
+
+    .Dropdown_Button {
+        padding: 0.3rem 1rem;
+        font-size: 1.75rem;
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: 1.2rem;
+        font-size: 1.6rem;
+        width: 50vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* || BIG MONITORS || */
