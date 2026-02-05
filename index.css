@@ -69,6 +69,7 @@ header {
     appearance: none;
     border: none;
     background: none;
+    line-height: 1;
 
     font-family: "Sniglet_Regular";
     text-decoration: none;
@@ -111,6 +112,8 @@ header {
 
     position: absolute;
     left: 0;
+    width: max-content;
+    min-width: 100%;
 
     border-radius: 0.35rem;
     z-index: 2000;
@@ -120,6 +123,7 @@ header {
     appearance: none;
     border: none;
     background: none;
+    line-height: 1;
 
     font-family: "Sniglet_Regular";
     text-decoration: none;
@@ -130,6 +134,7 @@ header {
     appearance: none;
     border: none;
     background: none;
+    line-height: 1;
 
     font-family: "Sniglet_Regular";
     cursor: pointer;
@@ -163,7 +168,6 @@ header {
 
     .Dropdown_Button {
         font-size: clamp(1.3rem, 4vw, 1.65rem);
-        line-height: 1;
     }
 
     .Dropdown_Menu {
@@ -177,13 +181,10 @@ header {
         top: 180%;
         padding: 0.75rem;
         font-size: clamp(1.5rem, 3vw, 1.75rem);
-        width: max-content;
-        min-width: 100%;
     }
 
     .Languages_Button {
         font-size: clamp(1.1rem, 2.5vw, 1.2rem);
-        line-height: 1;
     }
 
     .Languages_Menu button {
@@ -210,6 +211,20 @@ header {
         padding: 0.8rem;
         font-size: 1.4rem;
         width: 80vw;
+    }
+
+    .Languages_Menu {
+        top: 215%;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.4rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.25rem;
     }
 }
 
@@ -263,6 +278,20 @@ header {
 
     .Content_Box {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.8rem;
+        font-size: 1.45rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.6rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.4rem;
     }
 }
 
