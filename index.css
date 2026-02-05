@@ -150,12 +150,33 @@ header {
 
 /* || NOTEBOOKS || */
 @media (min-width: 1024px) and (max-width: 1279px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
 
+    .Header img {
+        max-height: 2.7rem;
+    }
+
+    .Dropdown_Button {
+        padding: 0.6rem 1.2rem;
+        font-size: 1.7rem;
+    }
+
+    .Dropdown_Menu {
+        padding: 1rem;
+        font-size: 1.6rem;
+        width: 70vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 /* || DESKTOPS || */
 @media (min-width: 1280px) and (max-width: 1599px) {
-
+    
 }
 
 /* || BIG MONITORS || */
