@@ -414,8 +414,10 @@ main {
 }
 
 .Basic_Cat img {
+    width: 100%;
     object-fit: contain;
     height: auto;
+    transform: translateY(6%);
 }
 
 /* || PHONES || */
@@ -456,11 +458,6 @@ main {
     .Basic_Cat {
         max-width: 20em;
     }
-
-    .Basic_Cat img {
-        width: 100%;
-        transform: translateY(6%);
-    }
 }
 
 /* || NOTEBOOKS || */
@@ -484,16 +481,29 @@ main {
     .Basic_Cat {
         max-width: 24em;
     }
-
-    .Basic_Cat img {
-        width: 100%;
-        transform: translateY(6%);
-    }
 }
 
 /* || DESKTOPS || */
 @media (min-width: 1280px) and (max-width: 1599px) {
+    #Title {
+        height: 48em;
+    }
 
+    .Background2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .Background2 img {
+        max-width: 70em;
+        max-height: 70em;
+    }
+
+    .Basic_Cat {
+        max-width: 28em;
+    }
 }
 
 /* || BIG MONITORS || */
