@@ -101,3 +101,32 @@ document.addEventListener("DOMContentLoaded", () => {
     Change_Language(saved_Language);
 
 });
+
+
+// Lock landscape orientation
+function lockOrientation() {
+
+    if (screen.orientation && screen.orientation.lock) {
+        screen.orientation.lock('portrait').catch(function(error) {
+            console.log('Orientation lock failed: ', error);
+        });
+    } 
+
+    else if (screen.lockOrientation) {
+        screen.lockOrientation('portrait');
+    } 
+    
+    else if (screen.mozLockOrientation) {
+        screen.mozLockOrientation('portrait');
+    } 
+    
+    else if (screen.msLockOrientation) {
+        screen.msLockOrientation('portrait');
+    }
+
+}
+
+window.addEventListener('DOMContentLoaded', lockOrientation);
+window.addEventListener('orientationchange', function() {
+    setTimeout(lockOrientation, 100);
+});

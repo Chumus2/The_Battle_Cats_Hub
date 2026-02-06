@@ -375,10 +375,9 @@ main {
 
 /* || TITLE || */
 
-/* || TITLE|| */
-
 #Title {
     width: 100%;
+    height: clamp(25em, 20vw, 55em);
     position: relative;
     display: flex;
     align-items: center;
@@ -395,12 +394,18 @@ main {
     height: 100%;
 }
 
+.Background2 {
+    position: absolute;
+    inset: 0;
+}
+
 .Background2 img {
     object-fit: cover;
     z-index: 1;
 }
 
 .Basic_Cat {
+    position: absolute;
     z-index: 2;
     display: flex;
     align-items: flex-end;
@@ -410,6 +415,7 @@ main {
 
 .Basic_Cat img {
     object-fit: contain;
+    height: auto;
 }
 
 /* || PHONES || */
@@ -431,7 +437,31 @@ main {
 
 /* || TABLETS || */
 @media (min-width: 768px) and (max-width: 1023px) {
+    #Title {
+        height: 30em;
+    }
 
+    .Background2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .Background2 img {
+        max-width: 50em;
+        max-height: 50em;
+    }
+
+    .Basic_Cat {
+        max-width: 20em;
+    }
+
+    .Basic_Cat img {
+        width: 100%;
+        height: auto;
+        transform: translateY(6%);
+    }
 }
 
 /* || NOTEBOOKS || */
