@@ -157,6 +157,18 @@ header {
     text-decoration-thickness: 3px;
 }
 
+.Languages_Options button.Selected {
+    color: rgb(231, 134, 64);
+    font-weight: 1000;
+}
+
+.Languages_Options button.Selected::after {
+    content: "✓";
+    margin-left: 0.5rem;
+    color: rgb(231, 134, 64);
+    font-weight: bold;
+}
+
 /* || PHONES || */
 @media (max-width: 767px) {
     header {
@@ -363,18 +375,58 @@ main {
 
 /* || TITLE || */
 
-.Title_Images {
-    position: relative;
+/* || TITLE|| */
+
+#Title {
     width: 100%;
-    height: clamp(16rem, 35vh, 28rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Assets/Images/Background1.gif);
+    background-position: center center;
+    background-size: cover;
     overflow: hidden;
 }
 
+#Title > picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
 
+.Background2 img {
+    object-fit: cover;
+    z-index: 1;
+}
+
+.Basic_Cat {
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 15%;
+}
+
+.Basic_Cat img {
+    object-fit: contain;
+}
 
 /* || PHONES || */
 @media (max-width: 767px) {
+    #Title {
+        height: clamp(25em, 20vw, 55em);
+    }
 
+    .Background2 img {
+        width: clamp(100%, 90vw, 110%);
+        height: clamp(100%, 90vh, 110%);
+    }
+
+    .Basic_Cat img {
+        width: clamp(70%, 43vw, 80%);
+        height: clamp(70%, 43vw, 80%);
+    }
 }
 
 /* || TABLETS || */

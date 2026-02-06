@@ -17,28 +17,28 @@ const Translations = {
         Content: "Inhalt",
         Overview: "Überblick",
         Developers: "Entwickler",
-        Languages: "Sprachen" 
+        Languages: "Sprachen"
     },
 
     FR: {
         Content: "Contenu",
         Overview: "Aperçu",
         Developers: "Développeurs",
-        Languages: "Langages" 
+        Languages: "Langages"
     },
 
     ES: {
         Content: "Contenido",
         Overview: "Descripción general",
         Developers: "Desarrolladores",
-        Languages: "Idiomas" 
+        Languages: "Idiomas"
     },
 
     IT: {
         Content: "Contenuto",
         Overview: "Panoramica",
         Developers: "Sviluppatori",
-        Languages: "Lingue" 
+        Languages: "Lingue"
     }
 
 };
@@ -53,6 +53,15 @@ function Change_Language(language) {
 
     localStorage.setItem("language", language);
     Languages_Menu.classList.remove("Active");
+
+    document.querySelectorAll(".Languages_Options button").forEach(button => {
+        button.classList.remove("Selected");
+    }); 
+
+    const Active_Button = document.querySelector(`[data-language="${language}"]`);
+    if (Active_Button) {
+        Active_Button.classList.add("Selected")
+    };
 
 };
 
