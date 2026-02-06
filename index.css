@@ -99,7 +99,6 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 0.85rem;
 }
 
 .Languages {
@@ -203,6 +202,10 @@ header {
     .Languages_Menu button {
         font-size: clamp(1rem, 2.2vw, 1.1rem);
     }
+
+    .Controls {
+        gap: 0.85rem;
+    }
 }
 
 /* || TABLETS || */
@@ -238,6 +241,10 @@ header {
 
     .Languages_Menu button {
         font-size: 1.25rem;
+    }
+
+    .Controls {
+        gap: 1.75rem;
     }
 }
 
@@ -280,6 +287,10 @@ header {
     .Languages_Menu button {
         font-size: 1.25rem;
     }
+
+    .Controls {
+        gap: 2rem;
+    }
 }
 
 /* || DESKTOPS || */
@@ -319,6 +330,10 @@ header {
 
     .Languages_Menu button {
         font-size: 1.45rem;
+    }
+
+    .Controls {
+        gap: 2rem;
     }
 }
 
@@ -360,6 +375,10 @@ header {
     .Languages_Menu button {
         font-size: clamp(1.5rem, 1vw, 1.8rem);
     }
+
+    .Controls {
+        gap: 2.5rem;
+    }
 }
 
 
@@ -396,6 +415,10 @@ main {
 
 .Background2 {
     position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     inset: 0;
 }
 
@@ -443,13 +466,6 @@ main {
         height: 30em;
     }
 
-    .Background2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
     .Background2 img {
         max-width: 50em;
         max-height: 50em;
@@ -464,13 +480,6 @@ main {
 @media (min-width: 1024px) and (max-width: 1279px) {
     #Title {
         height: 35em;
-    }
-
-    .Background2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
     }
 
     .Background2 img {
@@ -489,13 +498,6 @@ main {
         height: 48em;
     }
 
-    .Background2 {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow: hidden;
-    }
-
     .Background2 img {
         max-width: 70em;
         max-height: 70em;
@@ -508,5 +510,16 @@ main {
 
 /* || BIG MONITORS || */
 @media (min-width: 1600px) {
+    #Title {
+        height: clamp(50em, 35vw, 55em);
+    }
 
+    .Background2 img {
+        max-width: clamp(70em, 60vw, 85em);
+        max-height: clamp(70em, 60vw, 85em);
+    }
+
+    .Basic_Cat {
+        max-width: clamp(30em, 24vw, 36em);
+    }
 }
