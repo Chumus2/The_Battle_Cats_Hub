@@ -459,14 +459,36 @@ main {
 
     .Basic_Cat img {
         width: 100%;
-        height: auto;
         transform: translateY(6%);
     }
 }
 
 /* || NOTEBOOKS || */
 @media (min-width: 1024px) and (max-width: 1279px) {
+    #Title {
+        height: 35em;
+    }
 
+    .Background2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .Background2 img {
+        max-width: 60em;
+        max-height: 60em;
+    }
+
+    .Basic_Cat {
+        max-width: 24em;
+    }
+
+    .Basic_Cat img {
+        width: 100%;
+        transform: translateY(6%);
+    }
 }
 
 /* || DESKTOPS || */
