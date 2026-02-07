@@ -7,7 +7,7 @@ const Languages_Button = document.querySelector(".Languages_Button")
 const Languages_Menu = document.querySelector(".Languages_Menu")
 
 
-fetch("/translations.json")
+fetch("./translations.json")
   .then(res => res.json())
   .then(data => {
     Translations = data;
