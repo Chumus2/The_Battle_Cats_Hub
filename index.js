@@ -22,9 +22,16 @@ fetch("./translations.json")
 
 function Change_Language(language) {
 
+    if (!Translations || !Translations[language]) return;
+
     document.querySelectorAll("[data-translate]").forEach(element => {
+
         const key = element.getAttribute("data-translate")
-        element.textContent = Translations[language][key];
+        
+        if (Translations[language][key]) {
+            element.textContent = Translations[language][key];
+        }
+
     });
 
     localStorage.setItem("language", language);
@@ -71,6 +78,14 @@ document.querySelectorAll(".Languages_Options button").forEach(button => {
 
 });
 
+document.querySelectorAll(".Content_Box a").forEach(link => {
+
+    link.addEventListener("click", () => {
+        Dropdown_Menu.classList.remove("Active")
+        Dropdown_Button.classList.remove("Active");
+    });
+
+});
 
 // Lock landscape orientation
 function lockOrientation() {
