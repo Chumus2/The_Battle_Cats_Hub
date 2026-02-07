@@ -1,47 +1,23 @@
+let Translations = {};
+
 const Dropdown_Button = document.querySelector(".Dropdown_Button");
 const Dropdown_Menu = document.querySelector(".Dropdown_Menu");
 
 const Languages_Button = document.querySelector(".Languages_Button")
 const Languages_Menu = document.querySelector(".Languages_Menu")
 
-const Translations = {
 
-    EN: {
-        Content: "Content",
-        Overview: "Overview",
-        Developers: "Developers",
-        Languages: "Languages"
-    },
+fetch("/translations.json")
+  .then(res => res.json())
+  .then(data => {
+    Translations = data;
 
-    DE: {
-        Content: "Inhalt",
-        Overview: "Überblick",
-        Developers: "Entwickler",
-        Languages: "Sprachen"
-    },
-
-    FR: {
-        Content: "Contenu",
-        Overview: "Aperçu",
-        Developers: "Développeurs",
-        Languages: "Langages"
-    },
-
-    ES: {
-        Content: "Contenido",
-        Overview: "Descripción general",
-        Developers: "Desarrolladores",
-        Languages: "Idiomas"
-    },
-
-    IT: {
-        Content: "Contenuto",
-        Overview: "Panoramica",
-        Developers: "Sviluppatori",
-        Languages: "Lingue"
-    }
-
-};
+    const saved_Language = localStorage.getItem("language") || "EN";
+    Change_Language(saved_Language);
+  })
+  .catch(err => {
+    console.error("Failed to load translations:", err);
+});
 
 
 function Change_Language(language) {
@@ -92,13 +68,6 @@ document.querySelectorAll(".Languages_Options button").forEach(button => {
         const language = button.dataset.language;
         Change_Language(language)
     });
-
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-
-    const saved_Language = localStorage.getItem("language") || "EN";
-    Change_Language(saved_Language);
 
 });
 
