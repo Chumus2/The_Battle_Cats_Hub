@@ -7,6 +7,7 @@ const Languages_Button = document.querySelector(".Languages_Button")
 const Languages_Menu = document.querySelector(".Languages_Menu")
 
 
+// read json translation file
 fetch("./translations.json")
   .then(res => res.json())
   .then(data => {
@@ -20,6 +21,7 @@ fetch("./translations.json")
 });
 
 
+// function to change language
 function Change_Language(language) {
 
     if (!Translations || !Translations[language]) return;
@@ -48,6 +50,7 @@ function Change_Language(language) {
 
 };
 
+// dropdowns
 Dropdown_Button.addEventListener("click", () => {
 
     Languages_Menu.classList.remove("Active");
@@ -69,6 +72,7 @@ Languages_Button.addEventListener("click", () => {
 });
 
 
+// languages
 document.querySelectorAll(".Languages_Options button").forEach(button => {
 
     button.addEventListener("click", () => {
@@ -86,6 +90,7 @@ document.querySelectorAll(".Content_Box a").forEach(link => {
     });
 
 });
+
 
 // Lock landscape orientation
 function lockOrientation() {
