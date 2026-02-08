@@ -722,8 +722,78 @@ main {
     }
 }
 
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Overview {
+        scroll-margin-top: 4.7rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: 90vw;
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.4rem;
+        margin-block: 1rem;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .Overview_Textbox img {
+        width: 60em;
+        height: 35em;
+        margin: 2rem 0;
+        border: 5px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.4rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 5px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: 17.5rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media 
+
 
 /* || INTERACTIONS / HOVERS || */
 
 /* || HEADER || */
 
+@keyframes Image_Selected {
+    0% {
+        border-color: #ffc107;
+    }
+
+    50% {
+        border-color:deeppink;
+    }
+
+    100% {
+        border-color: #ffc107;
+    }
+}
+
+.Overview_Textbox img:hover {
+    animation: Image_Selected 0.15s infinite;
+}
