@@ -677,6 +677,51 @@ main {
     }
 }
 
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Overview {
+        scroll-margin-top: 4.7rem;
+    }
+
+    .Overview_Texts {
+        padding: 2.5rem 3rem;
+        gap: 3rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.2rem;
+        margin-block: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        width: 85vw;
+        font-size: 1.25rem;
+    }
+
+    .Overview_Textbox img {
+        width: 50em;
+        height: 30em;
+        margin: 1.75rem 0;
+    }
+
+    .Downloads {
+        gap: 2.25rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.2rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.5rem;
+    }
+
+    .Download_Button {
+        width: 17.5rem;
+    }
+}
+
 
 /* || INTERACTIONS / HOVERS || */
 
