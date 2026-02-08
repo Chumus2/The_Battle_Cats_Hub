@@ -7,6 +7,12 @@
     font-weight: 700;
 }
 
+@font-face {
+    font-family: "Tactic_Round_Exd_Bold";
+    src: url(Assets/Fonts/Tactic_Round_Exd_Bold.ttf);
+    font-style: normal;
+}
+
 
 /* || RESETS || */
 
@@ -539,7 +545,8 @@ main {
 }
 
 .Overview_Textbox h2 {
-    font-style: italic;
+    font-family: "Tactic_Round_Exd_Bold";
+    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
 }
 
 .Overview_Textbox ul {
@@ -574,6 +581,8 @@ main {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border: 4px solid rgba(0, 0, 0, 0.151);
+    border-radius: 0.75rem;
 }
 
 .Download_Buttons img {
@@ -601,19 +610,70 @@ main {
         margin: 1.25rem;
     }
 
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+    }
+
     .Downloads {
         gap: 1.5rem;
     }
 
     .Downloads h2 {
         font-size: clamp(1.75rem, 5vw, 2.1rem);
-        margin-block: 0.5rem;
+        margin-block: 0.25rem 0.15rem;
     }
 
     .Download_Buttons {
         gap: 1rem;
-        width: clamp(17.5rem, 45vw, 20rem);
-        height: clamp(6rem, 12vw, 9rem);
+        padding: 1rem;
+    }
+
+    .Download_Button {
+        width: clamp(8.5rem, 34vw, 11rem);
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Overview {
+        scroll-margin-top: 4.7rem;
+    }
+
+    .Overview_Texts {
+        padding: 2rem;
+        gap: 2.5rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2rem;
+        margin-block: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        width: 90vw;
+        font-size: 1.15rem;
+    }
+
+    .Overview_Textbox img {
+        width: 37.5em;
+        margin: 1.5rem 0;
+    }
+
+    .Downloads {
+        gap: 2rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .Download_Button {
+        width: 15rem;
     }
 }
 
