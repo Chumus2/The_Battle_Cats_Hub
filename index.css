@@ -773,7 +773,55 @@ main {
 }
 
 /* || BIG MONITORS || */
-@media 
+@media (min-width: 1600px) {
+    #Overview {
+        scroll-margin-top: 4.7rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: clamp(90vw, 85vw, 80vw);
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        margin-block: 1rem;
+        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        width: 100%;
+        font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        max-width: 85rem;
+    }
+
+    .Overview_Textbox img {
+        width: clamp(60em, 65vw, 80em);
+        height: clamp(35em, 40vw, 48em);
+        margin: 2rem 0;
+        border: 6px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 6px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: clamp(17.5rem, 15vw, 22rem);
+    }
+}
 
 
 /* || INTERACTIONS / HOVERS || */
