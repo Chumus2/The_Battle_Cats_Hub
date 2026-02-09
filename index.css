@@ -903,6 +903,7 @@ main {
     position: relative;
     cursor: pointer;
     width: 75%;
+    max-width: 40rem;
     height: auto;
 }
 
@@ -938,6 +939,7 @@ main {
     position: relative;
     z-index: 1;
     width: 85vw;
+    max-width: 90rem;
 }
 
 .Trailer_Iframe {
@@ -955,6 +957,8 @@ main {
     background: none;
     border: none;
     cursor: pointer;
+    width: 11vw;
+    max-width: 5.5rem;
 }
 
 /* || PHONES || */
@@ -966,6 +970,54 @@ main {
 
     .Background_Decoration2 {
         background-size: 1.5rem 1.5rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Trailer {
+        gap: 1.75rem;
+        padding-block: 1.25rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 1.75rem 1.75rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Trailer {
+        gap: 2rem;
+        padding-block: 1.5rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 2rem 2rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Trailer {
+        gap: 2.25rem;
+        padding-block: 1.75rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 2.25rem 2.25rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Trailer {
+        gap: 2.5rem;
+        padding-block: 2rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 2.5rem 2.5rem;
     }
 }
 
