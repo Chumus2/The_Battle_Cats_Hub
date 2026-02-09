@@ -3,8 +3,14 @@ let Translations = {};
 const Dropdown_Button = document.querySelector(".Dropdown_Button");
 const Dropdown_Menu = document.querySelector(".Dropdown_Menu");
 
-const Languages_Button = document.querySelector(".Languages_Button")
-const Languages_Menu = document.querySelector(".Languages_Menu")
+const Languages_Button = document.querySelector(".Languages_Button");
+const Languages_Menu = document.querySelector(".Languages_Menu");
+
+const Trailer_Preview = document.querySelector(".Trailer_Preview");
+const Trailer_Modal = document.querySelector(".Trailer_Modal");
+const Trailer_Iframe = document.querySelector(".Trailer_Iframe");
+const Trailer_Close_Button = document.querySelector(".Trailer_Close_Button");
+const Trailer_Overlay = document.querySelector(".Trailer_Overlay");
 
 
 // read json translation file
@@ -90,6 +96,24 @@ document.querySelectorAll(".Content_Box a").forEach(link => {
     });
 
 });
+
+
+// trailer 
+Trailer_Preview.addEventListener("click", () => {
+
+    const id = Trailer_Preview.dataset.videoId;
+    Trailer_Iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0`;
+    Trailer_Modal.classList.add("Active");
+
+});
+
+function Close_Trailer() {
+    Trailer_Iframe.src = "";
+    Trailer_Modal.classList.remove("Active");
+}
+
+Trailer_Close_Button.addEventListener("click", Close_Trailer);
+Trailer_Overlay.addEventListener("click", Close_Trailer);
 
 
 // Lock landscape orientation
