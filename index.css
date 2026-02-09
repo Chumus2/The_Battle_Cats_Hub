@@ -882,8 +882,6 @@ main {
     align-items: center;
     width: 100%;
     overflow: hidden;
-    gap: 1.5rem;
-    padding-block: 1rem;
     background-color: rgba(114, 199, 247);
 }
 
@@ -898,7 +896,6 @@ main {
         radial-gradient(circle at 90% 10%, #6c96f8 5%, transparent 5%),
         radial-gradient(circle at 90% 90%, #6c96f8 5%, transparent 5%),
         radial-gradient(circle at 10% 90%, #6c96f8 5%, transparent 5%);
-    background-size: 1.5rem 1.5rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -958,6 +955,18 @@ main {
     background: none;
     border: none;
     cursor: pointer;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Trailer {
+        gap: 1.5rem;
+        padding-block: 1rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 1.5rem 1.5rem;
+    }
 }
 
 
