@@ -149,7 +149,12 @@ window.addEventListener('orientationchange', function() {
 window.addEventListener("load", () => {
 
     const Loader = document.getElementById("Loading_Screen");
-    Loader.classList.add("Hidden");
-    setTimeout(() => Loader.remove(), 500);
+    
+    setTimeout(() => {
+
+        Loader.classList.add("Hidden");
+        setTimeout(() => Loader.remove(), 1000);
+
+    }, 750);
 
 });
