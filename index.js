@@ -143,3 +143,13 @@ window.addEventListener('DOMContentLoaded', lockOrientation);
 window.addEventListener('orientationchange', function() {
     setTimeout(lockOrientation, 100);
 });
+
+
+// Loading Screen
+window.addEventListener("load", () => {
+
+    const Loader = document.getElementById("Loading_Screen");
+    Loader.classList.add("Hidden");
+    setTimeout(() => Loader.remove(), 500);
+
+});
