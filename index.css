@@ -1015,25 +1015,27 @@ main {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
+.Developers_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.Developers_Texts h2 {
+    font-family: "Tactic_Round_Exd_Bold";
+    font-size: 1.5rem;
+    padding-block: 3rem 1rem;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+}
+
+.Developers_Textbox {
+    width: 93vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
 
 /* || INTERACTIONS / HOVERS || */
-
-/* || HEADER || */
-
-@keyframes Image_Selected {
-    0% {
-        border-color: #ffc107;
-    }
-
-    50% {
-        border-color:deeppink;
-    }
-
-    100% {
-        border-color: #ffc107;
-    }
-}
-
-.Overview_Textbox img:hover {
-    animation: Image_Selected 0.5s infinite;
-}
