@@ -66,6 +66,36 @@ a {
 }
 
 
+/* || LOADING SCREEN || */
+
+#Loading_Screen {
+    position: fixed;
+    inset: 0;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+#Loading_Screen.Hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.Loader {
+    width: 20%;
+    height: 7.5%;
+    background: linear-gradient(#0000 calc(1*100%/6),#fff 0 calc(3*100%/6),#0000 0),
+            linear-gradient(#0000 calc(2*100%/6),#fff 0 calc(4*100%/6),#0000 0),
+            linear-gradient(#0000 calc(3*100%/6),#fff 0 calc(5*100%/6),#0000 0);
+    background-size: 1rem 400%;
+    background-repeat: no-repeat;
+    animation: Matrix 1s infinite linear;
+}
+
 
 /* || HEADER || */
 
@@ -1039,3 +1069,15 @@ main {
 
 
 /* || INTERACTIONS / HOVERS || */
+
+/* || LOADING SCREEN || */
+
+@keyframes Matrix {
+    0% {
+        background-position: 0% 100%, 50% 100%, 100% 100%
+    }
+
+    100% {
+        background-position: 0% 0%, 50% 0%, 100% 0%
+    }
+}
