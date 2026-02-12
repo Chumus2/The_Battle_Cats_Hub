@@ -1179,7 +1179,7 @@ main {
 /* || DESKTOPS || */
 @media (min-width: 1280px) and (max-width: 1599px) {
     .Background_Decoration2 {
-        background-size: 5.5rem 5.5rem;
+        background-size: 6rem 6rem;
     }
 
     .Developers_Texts {
@@ -1189,6 +1189,7 @@ main {
     .Developers_Texts h2 {
         font-size: 2.4rem;
         padding-block: 6rem 1rem;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
     }
 
     .Developers_Textbox {
@@ -1204,11 +1205,45 @@ main {
     .Developers_Gallery {
         gap: 3.25rem;
     }
+
+    .Developers_Textbox p:not(:last-of-type) {
+        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+    }
 }
 
 /* || BIG MONITORS || */
 @media (min-width: 1600px) {
+    .Background_Decoration2 {
+        background-size: 5.5rem 5.5rem;
+    }
 
+    .Developers_Texts {
+        gap: 2.25rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        padding-block: 6rem 1rem;
+        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+    }
+
+    .Developers_Textbox {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        padding-block: 1rem 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 3.25rem;
+    }
+
+    .Developers_Textbox p:not(:last-of-type) {
+        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+    }
 }
 
 
