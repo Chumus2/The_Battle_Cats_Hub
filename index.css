@@ -576,6 +576,7 @@ main {
     position: relative;
     width: 100%;
     overflow: hidden;
+    scroll-margin-top: 4.7rem;
 }
 
 .Background_Decoration {
@@ -615,7 +616,7 @@ main {
 }
 
 :where(.Overview_Textbox p, .Overview_Textbox li) {
-    width: 93vw;
+    width: 100%;
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
@@ -654,7 +655,6 @@ main {
 /* || PHONES || */
 @media (max-width: 767px) {
     #Overview {
-        scroll-margin-top: 3rem;
         padding-bottom: 2.25rem;
     }
 
@@ -674,7 +674,8 @@ main {
     }
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
-        font-size: clamp(1.05rem, 2.5vw, 1.3rem);
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        padding: 0.15rem 0.1rem;
     }
 
     .Downloads {
@@ -703,7 +704,6 @@ main {
     }
 
     #Overview {
-        scroll-margin-top: 4.7rem;
         padding-bottom: 2.5rem;
     }
 
@@ -718,8 +718,8 @@ main {
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
-        width: 90vw;
         font-size: 1.15rem;
+        padding: 0.25rem 1rem;
     }
 
     .Overview_Textbox img {
@@ -752,7 +752,6 @@ main {
     }
 
     #Overview {
-        scroll-margin-top: 4.7rem;
         padding-bottom: 3rem;
     }
 
@@ -767,8 +766,8 @@ main {
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
-        width: 85vw;
         font-size: 1.25rem;
+        padding: 0.3rem 1.25rem;
     }
 
     .Overview_Textbox img {
@@ -802,7 +801,6 @@ main {
     }
 
     #Overview {
-        scroll-margin-top: 4.7rem;
         padding-bottom: 3.25rem;
     }
 
@@ -820,8 +818,8 @@ main {
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
-        width: 100%;
         font-size: 1.3rem;
+        padding: 0.5rem 1.5rem;
     }
 
     .Overview_Textbox img {
@@ -857,7 +855,6 @@ main {
     }
 
     #Overview {
-        scroll-margin-top: 4.7rem;
         padding-bottom: 3.5rem;
     }
 
@@ -875,8 +872,8 @@ main {
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
-        width: 100%;
         font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        padding: 0.5rem 2rem;
         max-width: 85rem;
     }
 
@@ -916,6 +913,7 @@ main {
     align-items: center;
     width: 100%;
     overflow: hidden;
+    scroll-margin-top: 5rem;
 }
 
 .Trailer_Preview {
@@ -1031,6 +1029,7 @@ main {
     width: 100%;
     overflow: hidden;
     background-color: rgba(114, 199, 247);
+    scroll-margin-top: 3.55rem;
 }
 
 .Background_Decoration2 {
@@ -1044,6 +1043,8 @@ main {
                 radial-gradient(circle at 90% 10%, #6c96f8 5%, transparent 5%),
                 radial-gradient(circle at 90% 90%, #6c96f8 5%, transparent 5%),
                 radial-gradient(circle at 10% 90%, #6c96f8 5%, transparent 5%);
+    opacity: 0.6;
+    background-position: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -1052,21 +1053,87 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1rem;
+    z-index: 2;
 }
 
 .Developers_Texts h2 {
     font-family: "Tactic_Round_Exd_Bold";
-    font-size: 1.5rem;
-    padding-block: 3rem 1rem;
     border-bottom: 3px solid rgba(0, 0, 0, 0.212);
 }
 
 .Developers_Textbox {
-    width: 93vw;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    align-items: center;
+}
+
+.Developers_Textbox p:not(:last-of-type) {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+}
+
+.Developers_Gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.Developers_Gallery img {
+    width: 50%;
+    max-width: 17.5em;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    .Background_Decoration2 {
+        background-size: 3rem 3rem;
+    }
+
+    .Developers_Texts {
+        gap: 1rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: clamp(1.5rem, 4vw, 2.5rem);
+        padding-block: 3rem 0.5rem;
+    }
+
+    .Developers_Textbox {
+        padding: 1rem;
+        gap: 1.25rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+        padding-block: 0 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 2rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+
 }
 
 
