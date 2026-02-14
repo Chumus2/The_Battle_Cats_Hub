@@ -12,6 +12,53 @@ const Trailer_Iframe = document.querySelector(".Trailer_Iframe");
 const Trailer_Close_Button = document.querySelector(".Trailer_Close_Button");
 const Trailer_Overlay = document.querySelector(".Trailer_Overlay");
 
+const Games = document.querySelector('.Game_Textbox');
+const Next_Button = document.querySelector('.Next_Button');
+const Back_Button = document.querySelector('.Back_Button');
+const Game_Image = Games.querySelector("img");
+const Game_Link = Games;
+const Game_Title = Games.querySelector("h3");
+const Game_Description = Games.querySelector("p");
+
+let current_Index = 0;
+const GamesData = [
+    {
+        href: "https://battlecats.club/en/series/battlecats/",
+        img: "Assets/Images/The_Battle_Cats.png",
+        alt: "The Battle Cats Main Menu",
+        title: "The Battle Cats",
+        desc: "An iconic tower defense experience where you build an army of crazy cats."
+    },
+    {
+        href: "https://battlecats.club/en/series/odorobo/",
+        img: "Assets/Images/The_Burgle_Cats.png",
+        alt: "The Burgle Cats Main Menu",
+        title: "The Burgle Cats",
+        desc: "A quirky game where sneaky cats dodge traps and outsmart guards."
+    },
+    {
+        href: "https://battlecats.club/en/series/mightycat/",
+        img: "Assets/Images/Let_Go_MightyCat.png",
+        alt: "Let's Go MightyCat Main Menu",
+        title: "Let's Go MightyCat!",
+        desc: "Fast action, unstoppable power, and a cat that never slows down."
+    },
+    {
+        href: "https://battlecats.club/en/series/hopping/",
+        img: "Assets/Images/Go_Go_PogoCat.png",
+        alt: "Go Go PogoCat Main Menu",
+        title: "Go Go PogoCat!",
+        desc: "Pogo-jumping cat bounces through stages, dodging obstacles and defeating enemies."
+    },
+    {
+        href: "https://battlecats.club/en/series/futaride/",
+        img: "Assets/Images/The_Battle_Cats_Unite.png",
+        alt: "The Battle Cats Unite Main Menu",
+        title: "The Battle Cats Unite",
+        desc: "A console version of the iconic tower defense game with cats, stages, and local co-op."
+    }
+];
+
 
 // read json translation file
 fetch("./translations.json")
@@ -114,6 +161,29 @@ function Close_Trailer() {
 
 Trailer_Close_Button.addEventListener("click", Close_Trailer);
 Trailer_Overlay.addEventListener("click", Close_Trailer);
+
+
+// games gallery
+function Show_Game(index) {
+    const game = GamesData[index];
+    Game_Link.href = game.href;
+    Game_Image.src = game.img;
+    Game_Image.alt = game.alt;
+    Game_Title.textContent = game.title;
+    Game_Description.textContent = game.desc;
+}
+
+Show_Game(current_Index)
+
+Next_Button.addEventListener('click', () => {
+    current_Index = (current_Index + 1) % GamesData.length;
+    Show_Game(current_Index);
+});
+
+Back_Button.addEventListener('click', () => {
+    current_Index = (current_Index - 1 + GamesData.length) % GamesData.length;
+    Show_Game(current_Index);
+});
 
 
 // Lock landscape orientation

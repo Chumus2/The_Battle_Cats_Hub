@@ -1088,6 +1088,10 @@ main {
 
 /* || PHONES || */
 @media (max-width: 767px) {
+    #Developers {
+        padding-bottom: 3rem;
+    }
+
     .Background_Decoration2 {
         background-size: 3rem 3rem;
     }
@@ -1118,6 +1122,10 @@ main {
 
 /* || TABLETS || */
 @media (min-width: 768px) and (max-width: 1023px) {
+    #Developers {
+        padding-bottom: 3.5rem;
+    }
+
     .Background_Decoration2 {
         background-size: 4rem 4rem;
     }
@@ -1148,6 +1156,10 @@ main {
 
 /* || NOTEBOOKS || */
 @media (min-width: 1024px) and (max-width: 1279px) {
+    #Developers {
+        padding-bottom: 3.75rem;
+    }
+
     .Background_Decoration2 {
         background-size: 5rem 5rem;
     }
@@ -1178,6 +1190,10 @@ main {
 
 /* || DESKTOPS || */
 @media (min-width: 1280px) and (max-width: 1599px) {
+    #Developers {
+        padding-bottom: 4rem;
+    }
+
     .Background_Decoration2 {
         background-size: 6rem 6rem;
     }
@@ -1213,6 +1229,10 @@ main {
 
 /* || BIG MONITORS || */
 @media (min-width: 1600px) {
+    #Developers {
+        padding-bottom: 4.5rem;
+    }
+
     .Background_Decoration2 {
         background-size: 5.5rem 5.5rem;
     }
@@ -1243,6 +1263,132 @@ main {
 
     .Developers_Textbox p:not(:last-of-type) {
         border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+    }
+}
+
+
+/* || OTHER_GAMES || */
+
+#Other_Games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #72e68f;
+    scroll-margin-top: 3.55rem;
+}
+
+.Background_Decoration3 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background-color: transparent; 
+    opacity: 0.35;
+    background:
+        radial-gradient(circle,#2c9e5b 20%, transparent 20%, transparent 80%,#2c9e5b 80%,#2c9e5b),
+        radial-gradient(circle,#2c9e5b 20%, transparent 20%, transparent 80%,#2c9e5b 80%,#2c9e5b) 
+        12.5px 12.5px;
+}
+
+#Other_Games h2 {
+    font-family: "Tactic_Round_Exd_Bold";
+    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+    text-align: center;
+}
+
+.Games_Gallery_Buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 95%;
+    z-index: 2;
+}
+
+.Games_Gallery_Buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: all;
+    width: 15vw;
+    max-width: 6.5em; 
+    height: 15vw;
+    max-height: 6.5em;
+}
+
+.Games_Gallery {
+    position: relative;
+    width: 80vw;
+    max-width: 50rem;
+    height: 87.5vw;
+    max-height: 35rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Game_Textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.281);
+    border: 3px solid #2c9e5b;
+}
+
+.Game_Info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.575);
+    color: whitesmoke;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Other_Games {
+        padding: 1.5rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 1.5rem 1.5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: clamp(1.5rem, 5vw, 2.1rem);
+        padding-block: 1rem 0;
+    }
+
+    .Games_Gallery_Buttons {
+        margin: 1rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2rem auto;
+    }
+
+    .Game_Info {
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+    }
+    
+    .Game_Info p {
+        font-size: clamp(0.9rem, 2.2vw, 1.8rem);
     }
 }
 
