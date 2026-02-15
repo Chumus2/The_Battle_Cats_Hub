@@ -1,5 +1,7 @@
 let Translations = {};
 
+const Scroll_Top_Button = document.getElementById("Scroll_Top_Button");
+
 const Dropdown_Button = document.querySelector(".Dropdown_Button");
 const Dropdown_Menu = document.querySelector(".Dropdown_Menu");
 
@@ -227,4 +229,21 @@ window.addEventListener("load", () => {
 
     }, 750);
 
+});
+
+
+// scroll top button
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 300) {
+        Scroll_Top_Button.classList.add("Show")
+    } 
+    else {
+        Scroll_Top_Button.classList.remove("Show")
+    };
+
+});
+
+Scroll_Top_Button.addEventListener("click", () => {
+    window.scrollTo({top: 0, behavior: "smooth"});
 });

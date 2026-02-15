@@ -42,7 +42,8 @@
         "Burgle_Cats_Description": "A quirky game by PONOS where sneaky cats dodge traps, outsmart guards, and commit adorable crimes.",
         "MightyCat_Description": "Fast action, unstoppable power, and a cat that never slows down.",
         "PogoCat_Description": "A fun arcade action game by PONOS where a pogo-jumping cat bounces through stages, dodging obstacles and defeating enemies.",
-        "TBC_Unite_Description": "A console version of the iconic tower defense game with cats, stages, and local co-op support."
+        "TBC_Unite_Description": "A console version of the iconic tower defense game with cats, stages, and local co-op support.",
+        "Social_Media": "Social Media"
 
     },
 
@@ -88,7 +89,8 @@
         "Burgle_Cats_Description": "Ein skurriles Spiel von PONOS, in dem listige Katzen Fallen ausweichen, Wachen überlisten und entzückende Verbrechen begehen.",
         "MightyCat_Description": "Rasante Action, unaufhaltsame Kraft und eine Katze, die niemals langsamer wird.",
         "PogoCat_Description": "Ein witziges Arcade-Actionspiel von PONOS, in dem eine pogospringende Katze durch verschiedene Level hüpft, Hindernissen ausweicht und Feinde besiegt.",
-        "TBC_Unite_Description": "Eine Konsolenversion des legendären Tower-Defense-Spiels mit Katzen, Levels und lokalem Koop-Modus."
+        "TBC_Unite_Description": "Eine Konsolenversion des legendären Tower-Defense-Spiels mit Katzen, Levels und lokalem Koop-Modus.",
+        "Social_Media": "Soziale Medien"
 
     },
 
@@ -134,7 +136,8 @@
         "Burgle_Cats_Description": "Un jeu original de PONOS où des chats rusés esquivent des pièges, déjouent les gardes et commettent d'adorables crimes.",
         "MightyCat_Description": "Action fulgurante, puissance irrésistible et un chat qui ne ralentit jamais.",
         "PogoCat_Description": "Un jeu d'arcade amusant de PONOS où un chat sautant à la perche traverse des niveaux en esquivant les obstacles et en vainquant des ennemis.",
-        "TBC_Unite_Description": "Une version console du jeu emblématique de tower defense avec des chats, des niveaux et un mode coopératif local."
+        "TBC_Unite_Description": "Une version console du jeu emblématique de tower defense avec des chats, des niveaux et un mode coopératif local.",
+        "Social_Media": "Réseaux sociaux"
 
     },
 
@@ -180,7 +183,8 @@
         "Burgle_Cats_Description": "Un peculiar juego de PONOS en el que los gatos escurridizos esquivan trampas, burlan a los guardias y cometen crímenes adorables.",
         "MightyCat_Description": "Acción rápida, potencia imparable y un gato que nunca pierde el ritmo.",
         "PogoCat_Description": "Un divertido juego de acción arcade de PONOS en el que un gato saltador rebota por los escenarios, esquivando obstáculos y derrotando enemigos.",
-        "TBC_Unite_Description": "Una versión de consola del icónico juego de defensa de torres con gatos, escenarios y soporte cooperativo local."
+        "TBC_Unite_Description": "Una versión de consola del icónico juego de defensa de torres con gatos, escenarios y soporte cooperativo local.",
+        "Social_Media": "Redes Sociales"
 
     },
 
@@ -226,7 +230,8 @@
         "Burgle_Cats_Description": "Un gioco bizzarro di PONOS in cui gatti furtivi schivano trappole, superano in astuzia le guardie e commettono adorabili crimini.",
         "MightyCat_Description": "Azione rapida, potenza inarrestabile e un gatto che non rallenta mai.",
         "PogoCat_Description": "Un divertente gioco arcade d'azione di PONOS in cui un gatto saltatore rimbalza attraverso i livelli, schivando ostacoli e sconfiggendo nemici.",
-        "TBC_Unite_Description": "Una versione per console dell'iconico gioco tower defense con gatti, livelli e supporto cooperativo locale."
+        "TBC_Unite_Description": "Una versione per console dell'iconico gioco tower defense con gatti, livelli e supporto cooperativo locale.",
+        "Social_Media": "Social media"
 
     }
 
