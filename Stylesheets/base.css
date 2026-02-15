@@ -1,0 +1,97 @@
+/* || FONTS || */
+@font-face {
+    font-family: "Sniglet_Regular";
+    src: url(Assets/Fonts/Sniglet_Regular.ttf);
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Tactic_Round_Exd_Bold";
+    src: url(Assets/Fonts/Tactic_Round_Exd_Bold.ttf);
+    font-style: normal;
+}
+
+
+/* || RESETS || */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+body {
+    font-size: 16px;
+    color: black;
+    background-color: bisque;
+    font-family: var(--Font_Base);
+    line-height: 1.6;
+}
+
+:where(img, picture, video, canvas, svg) {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+a {
+    text-decoration: none;
+    color: var(--Color_Text);
+}
+
+:where(ul ol) {
+    list-style: none;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+
+/* || VARIABLES || */
+:root {
+    /* FONTS */
+    --Font_Base: "Sniglet_Regular";
+    --Font_Title: "Tactic_Round_Exd_Bold";
+
+    /* DECORATIONS */
+    --Dec_Size: 3.5rem;
+    --Dec_Background: radial-gradient(rgba(255, 147, 24, 0.884) 5%, rgb(247, 198, 63) 6%);
+    --Dec_Base: linear-gradient(to bottom, #fff6d5 0%,#ffd27a 40%,#ff9f1c 100%);
+
+    /* COLORS */
+    --Color_Text: black;
+    --Color_White: whitesmoke;
+    --Color_Overlay_Dark: rgba(0, 0, 0, 0.575);
+
+    /* BORDERS */
+    --Border_Light: 3px solid rgba(0, 0, 0, 0.212);
+    --Border_Medium: 5px solid rgba(0, 0, 0, 0.212);
+    --Border_Heavy: 6px solid rgba(0, 0, 0, 0.212);
+
+    /* SHADOWS */
+    --Shadow_Card: 0 18px 40px rgba(0, 0, 0, 0.281);
+
+    /* SPACING */
+    --Section_Padding: 1.5rem;
+    --Content_Gap: 1rem;
+
+    /* TEXTS */
+    --H2_Size: 2rem;
+    --H3_Size: 1.5rem;
+}
+
+
+/* || MAIN || */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
