@@ -1306,7 +1306,6 @@ main {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    width: 95%;
     z-index: 2;
 }
 
@@ -1324,8 +1323,8 @@ main {
 .Games_Gallery {
     position: relative;
     width: 80vw;
-    max-width: 50rem;
-    height: 87.5vw;
+    max-width: 40rem;
+    height: 75vw;
     max-height: 35rem;
     border-radius: 0.5rem;
     overflow: hidden;
@@ -1343,6 +1342,10 @@ main {
     border: 3px solid #2c9e5b;
 }
 
+.Game_Textbox img {
+    max-width: 40rem;
+}
+
 .Game_Info {
     width: 100%;
     height: 100%;
@@ -1354,6 +1357,18 @@ main {
     background-color: rgba(0, 0, 0, 0.575);
     color: whitesmoke;
 }
+
+.Game_Info h3 {
+    line-height: 1.25;
+    max-width: 90%;
+}
+
+.Game_Info p {
+    line-height: 1.4;
+    max-width: 100%;
+    overflow: hidden;
+}
+
 
 /* || PHONES || */
 @media (max-width: 767px) {
@@ -1371,6 +1386,7 @@ main {
     }
 
     .Games_Gallery_Buttons {
+        width: 95vw;
         margin: 1rem auto 0 auto;
     }
 
@@ -1408,6 +1424,7 @@ main {
     }
 
     .Games_Gallery_Buttons {
+        width: 95vw;
         margin: 1.5rem auto 0 auto;
     }
 
@@ -1426,6 +1443,44 @@ main {
     
     .Game_Info p {
         font-size: 1.2rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Other_Games {
+        padding: 2.5rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 4rem 4rem;
+    }
+
+    #Other_Games h2 {
+        font-size: 2.2rem;
+        padding-block: 1.75rem 0.75rem;
+    }
+
+    .Games_Gallery_Buttons {
+        width: 90vw;
+        margin: 2rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: 1rem;
+        padding: 2rem;
+    }
+
+    .Game_Info h3 {
+        font-size: 1.65rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.3rem;
     }
 }
 
