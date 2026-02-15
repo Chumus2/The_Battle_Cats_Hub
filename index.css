@@ -1392,6 +1392,43 @@ main {
     }
 }
 
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Other_Games {
+        padding: 2rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 3rem 3rem;
+    }
+
+    #Other_Games h2 {
+        font-size: 2rem;
+        padding-block: 1.5rem 0.5rem;
+    }
+
+    .Games_Gallery_Buttons {
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: 0.75rem;
+        padding: 1.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: 1.65rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.2rem;
+    }
+}
+
 
 /* || INTERACTIONS / HOVERS || */
 
