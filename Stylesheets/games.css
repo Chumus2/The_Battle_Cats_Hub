@@ -239,6 +239,10 @@
         margin: 2.5rem auto;
     }
 
+    .Game_Textbox {
+        border: 5px solid #2c9e5b;
+    }
+
     .Game_Info {
         gap: 1.25rem;
         padding: var(--Section_Padding);
@@ -278,6 +282,10 @@
         margin: 2.5rem auto;
         max-width: 65rem;
         max-height: 50rem;
+    }
+
+    .Game_Textbox {
+        border: 6px solid #2c9e5b;
     }
 
     .Game_Textbox img {
