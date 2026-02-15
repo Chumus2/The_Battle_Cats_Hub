@@ -1,0 +1,324 @@
+/* || HEADER || */
+header {
+    top: 0;
+    position: sticky;
+    background-color: whitesmoke;
+    z-index: 1000;
+}
+
+.Header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header img {
+    width: auto;
+}
+
+:where(.Dropdown_Button, .Languages_Button) {
+    appearance: none;
+    border: none;
+    background: none;
+    line-height: 1;
+
+    font-family: var(--Font_Base);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-stroke: 2px transparent;
+}
+
+.Dropdown_Menu {
+    display: none;
+    position: absolute;
+
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.35rem;
+    z-index: 1000;
+}
+
+.Content_Box {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.Controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Languages {
+    position: relative;
+}
+
+.Languages_Menu {
+    display: none;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    left: 0;
+
+    width: max-content;
+    min-width: 100%;
+
+    border-radius: 0.35rem;
+    z-index: 2000;
+}
+
+.Languages_Menu button {
+    appearance: none;
+    border: none;
+    background: none;
+    line-height: 1;
+
+    font-family: var(--Font_Base);
+    cursor: pointer;
+}
+
+.Languages_Options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Dropdown_Menu.Active, .Languages_Menu.Active {
+    display: block;
+}
+
+.Dropdown_Button.Active, .Languages_Button.Active {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 3px;
+}
+
+.Languages_Options button.Selected {
+    color: rgb(231, 134, 64);
+    font-weight: 1000;
+}
+
+.Languages_Options button.Selected::after {
+    content: "✓";
+    margin-left: 0.5rem;
+    color: rgb(231, 134, 64);
+    font-weight: bold;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    header {
+        padding: var(--Content_Gap);
+    }
+
+    .Header img {
+        max-height: clamp(1.6rem, 6vw, 2.5rem);
+    }
+
+    .Dropdown_Button {
+        font-size: clamp(1.3rem, 4vw, 1.65rem);
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: 0.65rem;
+        font-size: clamp(1.2rem, 4vw, 1.55rem);
+        width: 95vw;
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.75rem;
+        font-size: clamp(1.5rem, 3vw, 1.75rem);
+    }
+
+    .Languages_Button {
+        font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    }
+
+    .Languages_Menu button {
+        font-size: clamp(1rem, 2.2vw, 1.1rem);
+    }
+
+    .Controls {
+        gap: 0.85rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 1.25rem 2rem;
+    }
+
+    .Header img {
+        max-height: 2.2rem;
+    }
+
+    .Dropdown_Button {
+        font-size: var(--H3_Size);
+    }
+
+    .Dropdown_Menu {
+        top: 175%;
+        padding: 0.8rem;
+        font-size: 1.4rem;
+        width: 80vw;
+    }
+
+    .Languages_Menu {
+        top: 215%;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.4rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.25rem;
+    }
+
+    .Controls {
+        gap: 1.75rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    .Header img {
+        max-height: 2.7rem;
+    }
+
+    .Dropdown_Button {
+        font-size: 1.75rem;
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: var(--Content_Gap);
+        font-size: 1.6rem;
+        width: 70vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .Languages_Menu {
+        top: 260%;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.4rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.25rem;
+    }
+
+    .Controls {
+        gap: 2rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    header {
+        padding: 1.75rem 5rem;
+    }
+
+    .Header img {
+        max-height: 3rem;
+    }
+
+    .Dropdown_Button {
+        font-size: 1.75rem;
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: 1.2rem;
+        font-size: 1.6rem;
+        width: 50vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Button {
+        font-size: 1.7rem;
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.9rem;
+        font-size: var(--H3_Size);
+    }
+
+    .Languages_Menu button {
+        font-size: 1.45rem;
+    }
+
+    .Controls {
+        gap: 2rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    header {
+        padding: 1.5rem 6rem;
+    }
+
+    .Header img {
+        max-height: clamp(3rem, 2vw, 3.6rem);
+    }
+
+    .Dropdown_Button {
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem)
+    }
+
+    .Dropdown_Menu {
+        top: 175%;
+        padding: var(--Content_Gap);
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
+        width: 35vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Button {
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem);
+    }
+
+    .Languages_Menu {
+        top: 230%;
+        padding: var(--Content_Gap);
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
+    }
+
+    .Languages_Menu button {
+        font-size: clamp(1.5rem, 1vw, 1.8rem);
+    }
+
+    .Controls {
+        gap: 2.5rem;
+    }
+}
