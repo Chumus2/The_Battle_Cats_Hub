@@ -1,14 +1,14 @@
 /* || FONTS || */
 @font-face {
     font-family: "Sniglet_Regular";
-    src: url(Assets/Fonts/Sniglet_Regular.ttf);
+    src: url("/Assets/Fonts/Sniglet_Regular.ttf");
     font-style: normal;
     font-weight: 700;
 }
 
 @font-face {
     font-family: "Tactic_Round_Exd_Bold";
-    src: url(Assets/Fonts/Tactic_Round_Exd_Bold.ttf);
+    src: url("/Assets/Fonts/Tactic_Round_Exd_Bold.ttf");
     font-style: normal;
 }
 
