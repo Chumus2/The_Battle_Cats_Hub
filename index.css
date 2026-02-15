@@ -32,7 +32,7 @@ body {
     font-size: 16px;
     color: black;
     background-color: bisque;
-    font-family: "Sniglet_Regular";
+    font-family: var(--Font_Base);
     line-height: 1.6;
 }
 
@@ -44,7 +44,7 @@ body {
 
 a {
     text-decoration: none;
-    color: black;
+    color: var(--Color_Text);
 }
 
 :where(ul ol) {
@@ -60,9 +60,35 @@ a {
 /* || VARIABLES || */
 
 :root {
+    /* FONTS */
+    --Font_Base: "Sniglet_Regular";
+    --Font_Title: "Tactic_Round_Exd_Bold";
+
+    /* DECORATIONS */
     --Dec_Size: 3.5rem;
     --Dec_Background: radial-gradient(rgba(255, 147, 24, 0.884) 5%, rgb(247, 198, 63) 6%);
     --Dec_Base: linear-gradient(to bottom, #fff6d5 0%,#ffd27a 40%,#ff9f1c 100%);
+
+    /* COLORS */
+    --Color_Text: black;
+    --Color_White: whitesmoke;
+    --Color_Overlay_Dark: rgba(0, 0, 0, 0.575);
+
+    /* BORDERS */
+    --Border_Light: 3px solid rgba(0, 0, 0, 0.212);
+    --Border_Medium: 5px solid rgba(0, 0, 0, 0.212);
+    --Border_Heavy: 6px solid rgba(0, 0, 0, 0.212);
+
+    /* SHADOWS */
+    --Shadow_Card: 0 18px 40px rgba(0, 0, 0, 0.281);
+
+    /* SPACING */
+    --Section_Padding: 1.5rem;
+    --Content_Gap: 1rem;
+
+    /* TEXTS */
+    --H2_Size: 2rem;
+    --H3_Size: 1.5rem;
 }
 
 
@@ -71,7 +97,7 @@ a {
 #Loading_Screen {
     position: fixed;
     inset: 0;
-    background-color: whitesmoke;
+    background-color: var(--Color_White);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -125,7 +151,7 @@ header {
     background: none;
     line-height: 1;
 
-    font-family: "Sniglet_Regular";
+    font-family: var(--Font_Base);
     text-decoration: none;
     cursor: pointer;
     -webkit-text-stroke: 2px transparent;
@@ -180,7 +206,7 @@ header {
     background: none;
     line-height: 1;
 
-    font-family: "Sniglet_Regular";
+    font-family: var(--Font_Base);
     cursor: pointer;
 }
 
@@ -215,7 +241,7 @@ header {
 /* || PHONES || */
 @media (max-width: 767px) {
     header {
-        padding: 1rem;
+        padding: var(--Content_Gap);
     }
 
     .Header img {
@@ -263,7 +289,7 @@ header {
     }
 
     .Dropdown_Button {
-        font-size: 1.5rem;
+        font-size: var(--H3_Size);
     }
 
     .Dropdown_Menu {
@@ -308,7 +334,7 @@ header {
 
     .Dropdown_Menu {
         top: 180%;
-        padding: 1rem;
+        padding: var(--Content_Gap);
         font-size: 1.6rem;
         width: 70vw;
     }
@@ -369,7 +395,7 @@ header {
     .Languages_Menu {
         top: 180%;
         padding: 0.9rem;
-        font-size: 1.5rem;
+        font-size: var(--H3_Size);
     }
 
     .Languages_Menu button {
@@ -397,7 +423,7 @@ header {
 
     .Dropdown_Menu {
         top: 175%;
-        padding: 1rem;
+        padding: var(--Content_Gap);
         font-size: clamp(1.6rem, 1.2vw, 1.9rem);
         width: 35vw;
     }
@@ -412,7 +438,7 @@ header {
 
     .Languages_Menu {
         top: 230%;
-        padding: 1rem;
+        padding: var(--Content_Gap);
         font-size: clamp(1.6rem, 1.2vw, 1.9rem);
     }
 
@@ -606,8 +632,8 @@ main {
 }
 
 .Overview_Textbox h2 {
-    font-family: "Tactic_Round_Exd_Bold";
-    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
 }
 
 .Overview_Textbox ul {
@@ -628,7 +654,7 @@ main {
     object-fit: cover;
     border: 3px solid rgba(0, 0, 0, 0.26);
     border-radius: 0.75rem;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.281);
+    box-shadow: var(--Shadow_Card);
 }
 
 .Downloads {
@@ -688,8 +714,8 @@ main {
     }
 
     .Download_Buttons {
-        gap: 1rem;
-        padding: 1rem;
+        gap: var(--Content_Gap);
+        padding: var(--Content_Gap);
     }
 
     .Download_Button {
@@ -708,12 +734,12 @@ main {
     }
 
     .Overview_Texts {
-        padding: 2rem;
+        padding: var(--Section_Padding);
         gap: 2.5rem;
     }
 
     .Overview_Textbox h2 {
-        font-size: 2rem;
+        font-size: var(--H2_Size);
         margin-bottom: 0.75rem;
     } 
 
@@ -732,7 +758,7 @@ main {
     }
 
     .Downloads h2 {
-        font-size: 2rem;
+        font-size: var(--H2_Size);
     }
 
     .Download_Buttons {
@@ -814,7 +840,7 @@ main {
     .Overview_Textbox h2 {
         font-size: 2.4rem;
         margin-bottom: 1rem;
-        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Medium);
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
@@ -868,7 +894,7 @@ main {
     .Overview_Textbox h2 {
         font-size: clamp(2.4rem, 2vw, 3rem);
         margin-bottom: 1rem;
-        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Heavy);
     } 
 
     :where(.Overview_Textbox p, .Overview_Textbox li) {
@@ -1057,8 +1083,8 @@ main {
 }
 
 .Developers_Texts h2 {
-    font-family: "Tactic_Round_Exd_Bold";
-    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
 }
 
 .Developers_Textbox {
@@ -1069,7 +1095,7 @@ main {
 }
 
 .Developers_Textbox p:not(:last-of-type) {
-    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+    border-bottom: var(--Border_Light);
 }
 
 .Developers_Gallery {
@@ -1078,7 +1104,7 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--Content_Gap);
 }
 
 .Developers_Gallery img {
@@ -1097,7 +1123,7 @@ main {
     }
 
     .Developers_Texts {
-        gap: 1rem;
+        gap: var(--Content_Gap);
     }
 
     .Developers_Texts h2 {
@@ -1106,7 +1132,7 @@ main {
     }
 
     .Developers_Textbox {
-        padding: 1rem;
+        padding: var(--Content_Gap);
         gap: 1.25rem;
     }
 
@@ -1135,12 +1161,12 @@ main {
     }
 
     .Developers_Texts h2 {
-        font-size: 2rem;
+        font-size: var(--H2_Size);
         padding-block: 4rem 0.5rem;
     }
 
     .Developers_Textbox {
-        padding: 2rem;
+        padding: var(--Section_Padding);
         gap: 1.5rem;
     }
 
@@ -1205,7 +1231,7 @@ main {
     .Developers_Texts h2 {
         font-size: 2.4rem;
         padding-block: 6rem 1rem;
-        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Medium);
     }
 
     .Developers_Textbox {
@@ -1223,7 +1249,7 @@ main {
     }
 
     .Developers_Textbox p:not(:last-of-type) {
-        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Medium);
     }
 }
 
@@ -1244,7 +1270,7 @@ main {
     .Developers_Texts h2 {
         font-size: clamp(2.4rem, 2vw, 3rem);
         padding-block: 6rem 1rem;
-        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Heavy);
     }
 
     .Developers_Textbox {
@@ -1262,7 +1288,7 @@ main {
     }
 
     .Developers_Textbox p:not(:last-of-type) {
-        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Heavy);
     }
 }
 
@@ -1295,8 +1321,8 @@ main {
 }
 
 #Other_Games h2 {
-    font-family: "Tactic_Round_Exd_Bold";
-    border-bottom: 3px solid rgba(0, 0, 0, 0.212);
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
     text-align: center;
 }
 
@@ -1338,7 +1364,7 @@ main {
     width: 100%;
     height: 100%;
     cursor: pointer;
-    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.281);
+    box-shadow: var(--Shadow_Card);
     border: 3px solid #2c9e5b;
 }
 
@@ -1354,8 +1380,8 @@ main {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.575);
-    color: whitesmoke;
+    background-color: var(--Color_Overlay_Dark);
+    color: var(--Color_White);
 }
 
 .Game_Info h3 {
@@ -1411,7 +1437,7 @@ main {
 /* || TABLETS || */
 @media (min-width: 768px) and (max-width: 1023px) {
     #Other_Games {
-        padding: 2rem;
+        padding: var(--Section_Padding);
     }
 
     .Background_Decoration3 {
@@ -1419,7 +1445,7 @@ main {
     }
 
     #Other_Games h2 {
-        font-size: 2rem;
+        font-size: var(--H2_Size);
         padding-block: 1.5rem 0.5rem;
     }
 
@@ -1471,8 +1497,8 @@ main {
     }
 
     .Game_Info {
-        gap: 1rem;
-        padding: 2rem;
+        gap: var(--Content_Gap);
+        padding: var(--Section_Padding);
     }
 
     .Game_Info h3 {
@@ -1497,7 +1523,7 @@ main {
     #Other_Games h2 {
         font-size: 2.4rem;
         padding-block: 2rem 0.75rem;
-        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Medium);
     }
 
     .Games_Gallery_Buttons {
@@ -1511,7 +1537,7 @@ main {
 
     .Game_Info {
         gap: 1.25rem;
-        padding: 2rem;
+        padding: var(--Section_Padding);
     }
 
     .Game_Info h3 {
@@ -1536,7 +1562,7 @@ main {
     #Other_Games h2 {
         font-size: clamp(2.6rem, 2vw, 3.2rem);
         padding-block: 2.5rem 1rem;
-        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+        border-bottom: var(--Border_Heavy);
     }
 
     .Games_Gallery_Buttons {
