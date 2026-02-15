@@ -1,5 +1,4 @@
 /* || OTHER_GAMES || */
-
 #Other_Games {
     display: flex;
     flex-direction: column;
@@ -296,20 +295,5 @@
     
     .Game_Info p {
         font-size: clamp(1.35rem, 1.1vw, 1.5rem);
-    }
-}
-
-
-/* || INTERACTIONS / HOVERS || */
-
-/* || LOADING SCREEN || */
-
-@keyframes Matrix {
-    0% {
-        background-position: 0% 100%, 50% 100%, 100% 100%
-    }
-
-    100% {
-        background-position: 0% 0%, 50% 0%, 100% 0%
     }
 }
