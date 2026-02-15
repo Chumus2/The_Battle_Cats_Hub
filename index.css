@@ -1480,7 +1480,46 @@ main {
     }
     
     .Game_Info p {
-        font-size: 1.3rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Other_Games {
+        padding: 2.75rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 5rem 5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: 2.4rem;
+        padding-block: 2rem 0.75rem;
+        border-bottom: 5px solid rgba(0, 0, 0, 0.212);
+    }
+
+    .Games_Gallery_Buttons {
+        width: 75vw;
+        margin: 2.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: 1.25rem;
+        padding: 2rem;
+    }
+
+    .Game_Info h3 {
+        font-size: 1.7rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.35rem;
     }
 }
 
