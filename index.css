@@ -1523,6 +1523,51 @@ main {
     }
 }
 
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Other_Games {
+        padding: 3rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 5.5rem 5.5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: clamp(2.6rem, 2vw, 3.2rem);
+        padding-block: 2.5rem 1rem;
+        border-bottom: 6px solid rgba(0, 0, 0, 0.212);
+    }
+
+    .Games_Gallery_Buttons {
+        width: 70vw;
+        margin: 2.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+        max-width: 65rem;
+        max-height: 50rem;
+    }
+
+    .Game_Textbox img {
+        max-width: 65rem;
+    }
+
+    .Game_Info {
+        gap: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: clamp(1.7rem, 1.4vw, 2.1rem);
+    }
+    
+    .Game_Info p {
+        font-size: clamp(1.35rem, 1.1vw, 1.5rem);
+    }
+}
+
 
 /* || INTERACTIONS / HOVERS || */
 
