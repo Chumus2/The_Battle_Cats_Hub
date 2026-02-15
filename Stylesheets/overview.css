@@ -1,0 +1,334 @@
+/* || OVERVIEW || */
+#Overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    scroll-margin-top: 4.7rem;
+}
+
+.Background_Decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    
+    background-image: var(--Dec_Background), var(--Dec_Background), var(--Dec_Base);
+    background-position: 0 0, calc(var(--Dec_Size) / 2) calc(var(--Dec_Size) / 2), center;
+    background-size: var(--Dec_Size) var(--Dec_Size), var(--Dec_Size) var(--Dec_Size), cover;
+}
+
+.Overview_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Overview_Textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Overview_Textbox h2 {
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
+}
+
+.Overview_Textbox ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+:where(.Overview_Textbox p, .Overview_Textbox li) {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.Overview_Textbox img {
+    max-width: 65rem;
+    max-height: 37.5rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 3px solid rgba(0, 0, 0, 0.26);
+    border-radius: 0.75rem;
+    box-shadow: var(--Shadow_Card);
+}
+
+.Downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Download_Buttons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 4px solid rgba(0, 0, 0, 0.151);
+    border-radius: 0.75rem;
+}
+
+.Download_Buttons img {
+    object-fit: contain;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Overview {
+        padding-bottom: 2.25rem;
+    }
+
+    .Overview_Texts {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        margin-bottom: 0.5rem;
+    }   
+
+    .Overview_Textbox img {
+        width: 100%;
+        margin: 1.25rem;
+    }
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        padding: 0.15rem 0.1rem;
+    }
+
+    .Downloads {
+        gap: 1.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        margin-block: 0.25rem 0.15rem;
+    }
+
+    .Download_Buttons {
+        gap: var(--Content_Gap);
+        padding: var(--Content_Gap);
+    }
+
+    .Download_Button {
+        width: clamp(8.5rem, 34vw, 11rem);
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --Dec_Size: 4.5rem;
+    }
+
+    #Overview {
+        padding-bottom: 2.5rem;
+    }
+
+    .Overview_Texts {
+        padding: var(--Section_Padding);
+        gap: 2.5rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: var(--H2_Size);
+        margin-bottom: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.15rem;
+        padding: 0.25rem 1rem;
+    }
+
+    .Overview_Textbox img {
+        width: 37.5em;
+        margin: 1.5rem 0;
+    }
+
+    .Downloads {
+        gap: 2rem;
+    }
+
+    .Downloads h2 {
+        font-size: var(--H2_Size);
+    }
+
+    .Download_Buttons {
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .Download_Button {
+        width: 15rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    :root {
+        --Dec_Size: 4.75rem;
+    }
+
+    #Overview {
+        padding-bottom: 3rem;
+    }
+
+    .Overview_Texts {
+        padding: 2.5rem 3rem;
+        gap: 3rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.25rem;
+        padding: 0.3rem 1.25rem;
+    }
+
+    .Overview_Textbox img {
+        width: 50em;
+        height: 30em;
+        margin: 1.75rem 0;
+    }
+
+    .Downloads {
+        gap: 2.25rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.2rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.5rem;
+    }
+
+    .Download_Button {
+        width: 17.5rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    :root {
+        --Dec_Size: 5rem;
+    }
+
+    #Overview {
+        padding-bottom: 3.25rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: 90vw;
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        border-bottom: var(--Border_Medium);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .Overview_Textbox img {
+        width: 60em;
+        height: 35em;
+        margin: 2rem 0;
+        border: 5px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.4rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 5px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: 17.5rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    :root {
+        --Dec_Size: 6rem;
+    }
+
+    #Overview {
+        padding-bottom: 3.5rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: clamp(90vw, 85vw, 80vw);
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        margin-bottom: 1rem;
+        border-bottom: var(--Border_Heavy);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        padding: 0.5rem 2rem;
+        max-width: 85rem;
+    }
+
+    .Overview_Textbox img {
+        width: clamp(60em, 65vw, 80em);
+        height: clamp(35em, 40vw, 48em);
+        margin: 2rem 0;
+        border: 6px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 6px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: clamp(15rem, 13vw, 20rem);
+    }
+}
