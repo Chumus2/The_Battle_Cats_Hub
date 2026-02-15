@@ -1,0 +1,1474 @@
+/* || HEADER || */
+
+header {
+    top: 0;
+    position: sticky;
+    background-color: whitesmoke;
+    z-index: 1000;
+}
+
+.Header {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Header img {
+    width: auto;
+}
+
+:where(.Dropdown_Button, .Languages_Button) {
+    appearance: none;
+    border: none;
+    background: none;
+    line-height: 1;
+
+    font-family: var(--Font_Base);
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-text-stroke: 2px transparent;
+}
+
+.Dropdown_Menu {
+    display: none;
+    position: absolute;
+
+    top: 165%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.35rem;
+    z-index: 1000;
+}
+
+.Content_Box {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
+
+.Controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Languages {
+    position: relative;
+}
+
+.Languages_Menu {
+    display: none;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    left: 0;
+
+    width: max-content;
+    min-width: 100%;
+
+    border-radius: 0.35rem;
+    z-index: 2000;
+}
+
+.Languages_Menu button {
+    appearance: none;
+    border: none;
+    background: none;
+    line-height: 1;
+
+    font-family: var(--Font_Base);
+    cursor: pointer;
+}
+
+.Languages_Options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.Dropdown_Menu.Active, .Languages_Menu.Active {
+    display: block;
+}
+
+.Dropdown_Button.Active, .Languages_Button.Active {
+    text-decoration: underline;
+    text-underline-offset: 0.5rem;
+    text-decoration-thickness: 3px;
+}
+
+.Languages_Options button.Selected {
+    color: rgb(231, 134, 64);
+    font-weight: 1000;
+}
+
+.Languages_Options button.Selected::after {
+    content: "✓";
+    margin-left: 0.5rem;
+    color: rgb(231, 134, 64);
+    font-weight: bold;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    header {
+        padding: var(--Content_Gap);
+    }
+
+    .Header img {
+        max-height: clamp(1.6rem, 6vw, 2.5rem);
+    }
+
+    .Dropdown_Button {
+        font-size: clamp(1.3rem, 4vw, 1.65rem);
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: 0.65rem;
+        font-size: clamp(1.2rem, 4vw, 1.55rem);
+        width: 95vw;
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.75rem;
+        font-size: clamp(1.5rem, 3vw, 1.75rem);
+    }
+
+    .Languages_Button {
+        font-size: clamp(1.3rem, 2.5vw, 1.65rem);
+    }
+
+    .Languages_Menu button {
+        font-size: clamp(1rem, 2.2vw, 1.1rem);
+    }
+
+    .Controls {
+        gap: 0.85rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        padding: 1.25rem 2rem;
+    }
+
+    .Header img {
+        max-height: 2.2rem;
+    }
+
+    .Dropdown_Button {
+        font-size: var(--H3_Size);
+    }
+
+    .Dropdown_Menu {
+        top: 175%;
+        padding: 0.8rem;
+        font-size: 1.4rem;
+        width: 80vw;
+    }
+
+    .Languages_Menu {
+        top: 215%;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.4rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.25rem;
+    }
+
+    .Controls {
+        gap: 1.75rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    header {
+        padding: 1.5rem 3rem;
+    }
+
+    .Header img {
+        max-height: 2.7rem;
+    }
+
+    .Dropdown_Button {
+        font-size: 1.75rem;
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: var(--Content_Gap);
+        font-size: 1.6rem;
+        width: 70vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .Languages_Menu {
+        top: 260%;
+        padding: 0.6rem;
+        font-size: 1.3rem;
+    }
+
+    .Languages_Button {
+        font-size: 1.4rem;
+    }
+
+    .Languages_Menu button {
+        font-size: 1.25rem;
+    }
+
+    .Controls {
+        gap: 2rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    header {
+        padding: 1.75rem 5rem;
+    }
+
+    .Header img {
+        max-height: 3rem;
+    }
+
+    .Dropdown_Button {
+        font-size: 1.75rem;
+    }
+
+    .Dropdown_Menu {
+        top: 180%;
+        padding: 1.2rem;
+        font-size: 1.6rem;
+        width: 50vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Button {
+        font-size: 1.7rem;
+    }
+
+    .Languages_Menu {
+        top: 180%;
+        padding: 0.9rem;
+        font-size: var(--H3_Size);
+    }
+
+    .Languages_Menu button {
+        font-size: 1.45rem;
+    }
+
+    .Controls {
+        gap: 2rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    header {
+        padding: 1.5rem 6rem;
+    }
+
+    .Header img {
+        max-height: clamp(3rem, 2vw, 3.6rem);
+    }
+
+    .Dropdown_Button {
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem)
+    }
+
+    .Dropdown_Menu {
+        top: 175%;
+        padding: var(--Content_Gap);
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
+        width: 35vw;
+    }
+
+    .Content_Box {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .Languages_Button {
+        font-size: clamp(1.8rem, 1.5vw, 2.2rem);
+    }
+
+    .Languages_Menu {
+        top: 230%;
+        padding: var(--Content_Gap);
+        font-size: clamp(1.6rem, 1.2vw, 1.9rem);
+    }
+
+    .Languages_Menu button {
+        font-size: clamp(1.5rem, 1vw, 1.8rem);
+    }
+
+    .Controls {
+        gap: 2.5rem;
+    }
+}
+
+
+/* || TITLE || */
+
+#Title {
+    width: 100%;
+    height: clamp(25em, 20vw, 55em);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(Assets/Images/Background1.gif);
+    background-position: center center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#Title picture {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.Background2 {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    inset: 0;
+}
+
+.Background2 img {
+    object-fit: cover;
+    z-index: 1;
+}
+
+.Basic_Cat {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    top: 15%;
+}
+
+.Basic_Cat img {
+    object-fit: contain;
+    height: auto;
+    transform: translateY(6%);
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Title {
+        height: clamp(25em, 20vw, 55em);
+    }
+
+    .Background2 img {
+        width: clamp(100%, 90vw, 110%);
+        height: clamp(100%, 90vh, 110%);
+    }
+
+    .Basic_Cat img {
+        width: clamp(70%, 43vw, 80%);
+        height: clamp(70%, 43vw, 80%);
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Title {
+        height: 30em;
+    }
+
+    .Background2 img {
+        max-width: 50em;
+        max-height: 50em;
+    }
+
+    .Basic_Cat {
+        max-width: 20em;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Title {
+        height: 35em;
+    }
+
+    .Background2 img {
+        max-width: 60em;
+        max-height: 60em;
+    }
+
+    .Basic_Cat {
+        max-width: 24em;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Title {
+        height: 48em;
+    }
+
+    .Background2 img {
+        max-width: 70em;
+        max-height: 70em;
+    }
+
+    .Basic_Cat {
+        max-width: 28em;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Title {
+        height: clamp(50em, 35vw, 55em);
+    }
+
+    .Background2 img {
+        max-width: clamp(70em, 60vw, 85em);
+        max-height: clamp(70em, 60vw, 85em);
+    }
+
+    .Basic_Cat {
+        max-width: clamp(30em, 24vw, 36em);
+    }
+}
+
+
+/* || OVERVIEW || */
+
+#Overview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    scroll-margin-top: 4.7rem;
+}
+
+.Background_Decoration {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    
+    background-image: var(--Dec_Background), var(--Dec_Background), var(--Dec_Base);
+    background-position: 0 0, calc(var(--Dec_Size) / 2) calc(var(--Dec_Size) / 2), center;
+    background-size: var(--Dec_Size) var(--Dec_Size), var(--Dec_Size) var(--Dec_Size), cover;
+}
+
+.Overview_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.Overview_Textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.Overview_Textbox h2 {
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
+}
+
+.Overview_Textbox ul {
+    padding-left: 0;
+    list-style-position: inside;
+}
+
+:where(.Overview_Textbox p, .Overview_Textbox li) {
+    width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.Overview_Textbox img {
+    max-width: 65rem;
+    max-height: 37.5rem;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border: 3px solid rgba(0, 0, 0, 0.26);
+    border-radius: 0.75rem;
+    box-shadow: var(--Shadow_Card);
+}
+
+.Downloads {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.Download_Buttons {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: 4px solid rgba(0, 0, 0, 0.151);
+    border-radius: 0.75rem;
+}
+
+.Download_Buttons img {
+    object-fit: contain;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Overview {
+        padding-bottom: 2.25rem;
+    }
+
+    .Overview_Texts {
+        padding: 1.5rem;
+        gap: 2rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        margin-bottom: 0.5rem;
+    }   
+
+    .Overview_Textbox img {
+        width: 100%;
+        margin: 1.25rem;
+    }
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        padding: 0.15rem 0.1rem;
+    }
+
+    .Downloads {
+        gap: 1.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        margin-block: 0.25rem 0.15rem;
+    }
+
+    .Download_Buttons {
+        gap: var(--Content_Gap);
+        padding: var(--Content_Gap);
+    }
+
+    .Download_Button {
+        width: clamp(8.5rem, 34vw, 11rem);
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    :root {
+        --Dec_Size: 4.5rem;
+    }
+
+    #Overview {
+        padding-bottom: 2.5rem;
+    }
+
+    .Overview_Texts {
+        padding: var(--Section_Padding);
+        gap: 2.5rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: var(--H2_Size);
+        margin-bottom: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.15rem;
+        padding: 0.25rem 1rem;
+    }
+
+    .Overview_Textbox img {
+        width: 37.5em;
+        margin: 1.5rem 0;
+    }
+
+    .Downloads {
+        gap: 2rem;
+    }
+
+    .Downloads h2 {
+        font-size: var(--H2_Size);
+    }
+
+    .Download_Buttons {
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .Download_Button {
+        width: 15rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    :root {
+        --Dec_Size: 4.75rem;
+    }
+
+    #Overview {
+        padding-bottom: 3rem;
+    }
+
+    .Overview_Texts {
+        padding: 2.5rem 3rem;
+        gap: 3rem;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.2rem;
+        margin-bottom: 0.75rem;
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.25rem;
+        padding: 0.3rem 1.25rem;
+    }
+
+    .Overview_Textbox img {
+        width: 50em;
+        height: 30em;
+        margin: 1.75rem 0;
+    }
+
+    .Downloads {
+        gap: 2.25rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.2rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.5rem;
+    }
+
+    .Download_Button {
+        width: 17.5rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    :root {
+        --Dec_Size: 5rem;
+    }
+
+    #Overview {
+        padding-bottom: 3.25rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: 90vw;
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: 2.4rem;
+        margin-bottom: 1rem;
+        border-bottom: var(--Border_Medium);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: 1.3rem;
+        padding: 0.5rem 1.5rem;
+    }
+
+    .Overview_Textbox img {
+        width: 60em;
+        height: 35em;
+        margin: 2rem 0;
+        border: 5px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: 2.4rem;
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 5px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: 17.5rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    :root {
+        --Dec_Size: 6rem;
+    }
+
+    #Overview {
+        padding-bottom: 3.5rem;
+    }
+
+    .Overview_Texts {
+        padding: 3rem 4rem;
+        gap: 3rem;
+        max-width: clamp(90vw, 85vw, 80vw);
+        margin-inline: auto;
+    }
+
+    .Overview_Textbox h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        margin-bottom: 1rem;
+        border-bottom: var(--Border_Heavy);
+    } 
+
+    :where(.Overview_Textbox p, .Overview_Textbox li) {
+        font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        padding: 0.5rem 2rem;
+        max-width: 85rem;
+    }
+
+    .Overview_Textbox img {
+        width: clamp(60em, 65vw, 80em);
+        height: clamp(35em, 40vw, 48em);
+        margin: 2rem 0;
+        border: 6px solid rgba(0, 0, 0, 0.26);
+    }
+
+    .Downloads {
+        gap: 2.5rem;
+    }
+
+    .Downloads h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+    }
+
+    .Download_Buttons {
+        gap: 1.75rem;
+        padding: 1.75rem;
+        border: 6px solid rgba(0, 0, 0, 0.151);
+    }
+
+    .Download_Button { 
+        width: clamp(15rem, 13vw, 20rem);
+    }
+}
+
+
+/* || TRAILER || */
+
+#Trailer {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    scroll-margin-top: 5rem;
+}
+
+.Trailer_Preview {
+    position: relative;
+    cursor: pointer;
+    width: 75%;
+    max-width: 40rem;
+    height: auto;
+}
+
+.Trailer_Play_Icon {
+    position: absolute;
+    width: 15%;
+    top: 54%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.Trailer_Modal {
+    position: fixed;
+    display: none;
+    inset: 0;
+    z-index: 1000;
+}
+
+.Trailer_Modal.Active {
+    display: grid;
+    place-items: center;
+}
+
+.Trailer_Overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(4px);
+}
+
+.Trailer_Content {
+    position: relative;
+    z-index: 1;
+    width: 85vw;
+    max-width: 90rem;
+}
+
+.Trailer_Iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    border: 4px solid rgba(0, 0, 0, 0.301);
+}
+
+.Trailer_Close_Button {
+    position: absolute;
+    top: -25px;
+    right: -17px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 11vw;
+    max-width: 5.5rem;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Trailer {
+        gap: 1.5rem;
+        padding-block: 1rem 2.5rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Trailer {
+        gap: 1.75rem;
+        padding-block: 1.25rem 4rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Trailer {
+        gap: 2rem;
+        padding-block: 1.5rem 5rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Trailer {
+        gap: 2.25rem;
+        padding-block: 1.75rem 5rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Trailer {
+        gap: 2.5rem;
+        padding-block: 2rem 5rem;
+    }
+}
+
+
+/* || DEVELOPERS || */
+
+#Developers {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgba(114, 199, 247);
+    scroll-margin-top: 3.55rem;
+}
+
+.Background_Decoration2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: 0;
+
+    background: radial-gradient(circle at 10% 10%, #6c96f8 5%, transparent 5%),
+                radial-gradient(circle at 90% 10%, #6c96f8 5%, transparent 5%),
+                radial-gradient(circle at 90% 90%, #6c96f8 5%, transparent 5%),
+                radial-gradient(circle at 10% 90%, #6c96f8 5%, transparent 5%);
+    opacity: 0.5;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.Developers_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.Developers_Texts h2 {
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
+}
+
+.Developers_Textbox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Developers_Textbox p:not(:last-of-type) {
+    border-bottom: var(--Border_Light);
+}
+
+.Developers_Gallery {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--Content_Gap);
+}
+
+.Developers_Gallery img {
+    width: 50%;
+    max-width: 17.5em;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Developers {
+        padding-bottom: 3rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 3rem 3rem;
+    }
+
+    .Developers_Texts {
+        gap: var(--Content_Gap);
+    }
+
+    .Developers_Texts h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        padding-block: 3rem 0.5rem;
+    }
+
+    .Developers_Textbox {
+        padding: var(--Content_Gap);
+        gap: 1.25rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+        padding-block: 0 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 2rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Developers {
+        padding-bottom: 3.5rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 4rem 4rem;
+    }
+
+    .Developers_Texts {
+        gap: 1.5rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: var(--H2_Size);
+        padding-block: 4rem 0.5rem;
+    }
+
+    .Developers_Textbox {
+        padding: var(--Section_Padding);
+        gap: 1.5rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: 1.15rem;
+        padding-block: 0.5rem 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 2.5rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Developers {
+        padding-bottom: 3.75rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 5rem 5rem;
+    }
+
+    .Developers_Texts {
+        gap: 2rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: 2.2rem;
+        padding-block: 5rem 1rem;
+    }
+
+    .Developers_Textbox {
+        padding: 2.5rem;
+        gap: 1.75rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: 1.25rem;
+        padding-block: 0.75rem 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 3rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Developers {
+        padding-bottom: 4rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 6rem 6rem;
+    }
+
+    .Developers_Texts {
+        gap: 2.25rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: 2.4rem;
+        padding-block: 6rem 1rem;
+        border-bottom: var(--Border_Medium);
+    }
+
+    .Developers_Textbox {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: 1.3rem;
+        padding-block: 1rem 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 3.25rem;
+    }
+
+    .Developers_Textbox p:not(:last-of-type) {
+        border-bottom: var(--Border_Medium);
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Developers {
+        padding-bottom: 4.5rem;
+    }
+
+    .Background_Decoration2 {
+        background-size: 5.5rem 5.5rem;
+    }
+
+    .Developers_Texts {
+        gap: 2.25rem;
+    }
+
+    .Developers_Texts h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        padding-block: 6rem 1rem;
+        border-bottom: var(--Border_Heavy);
+    }
+
+    .Developers_Textbox {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .Developers_Textbox p {
+        font-size: clamp(1.3rem, 1.2vw, 1.6rem);
+        padding-block: 1rem 1rem;
+    }
+
+    .Developers_Gallery {
+        gap: 3.25rem;
+    }
+
+    .Developers_Textbox p:not(:last-of-type) {
+        border-bottom: var(--Border_Heavy);
+    }
+}
+
+
+/* || OTHER_GAMES || */
+
+#Other_Games {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    background-color: #72e68f;
+    scroll-margin-top: 3.55rem;
+}
+
+.Background_Decoration3 {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    background-color: transparent; 
+    opacity: 0.35;
+    background:
+        radial-gradient(circle,#2c9e5b 20%, transparent 20%, transparent 80%,#2c9e5b 80%,#2c9e5b),
+        radial-gradient(circle,#2c9e5b 20%, transparent 20%, transparent 80%,#2c9e5b 80%,#2c9e5b) 
+        12.5px 12.5px;
+}
+
+#Other_Games h2 {
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
+    text-align: center;
+}
+
+.Games_Gallery_Buttons {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+.Games_Gallery_Buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    pointer-events: all;
+    width: 15vw;
+    max-width: 6.5em; 
+    height: 15vw;
+    max-height: 6.5em;
+}
+
+.Games_Gallery {
+    position: relative;
+    width: 80vw;
+    max-width: 40rem;
+    height: 75vw;
+    max-height: 35rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.Game_Textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    box-shadow: var(--Shadow_Card);
+    border: 3px solid #2c9e5b;
+}
+
+.Game_Textbox img {
+    max-width: 40rem;
+}
+
+.Game_Info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--Color_Overlay_Dark);
+    color: var(--Color_White);
+}
+
+.Game_Info h3 {
+    line-height: 1.25;
+    max-width: 90%;
+}
+
+.Game_Info p {
+    line-height: 1.4;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Other_Games {
+        padding: 1.5rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 1.5rem 1.5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: clamp(1.5rem, 5vw, 2.1rem);
+        padding-block: 1rem 0;
+    }
+
+    .Games_Gallery_Buttons {
+        width: 95vw;
+        margin: 1rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2rem auto;
+    }
+
+    .Game_Info {
+        gap: 0.3rem;
+        padding: 0.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: clamp(1.2rem, 2.5vw, 2rem);
+    }
+    
+    .Game_Info p {
+        font-size: clamp(0.9rem, 2.2vw, 1.8rem);
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Other_Games {
+        padding: var(--Section_Padding);
+    }
+
+    .Background_Decoration3 {
+        background-size: 3rem 3rem;
+    }
+
+    #Other_Games h2 {
+        font-size: var(--H2_Size);
+        padding-block: 1.5rem 0.5rem;
+    }
+
+    .Games_Gallery_Buttons {
+        width: 95vw;
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: 0.75rem;
+        padding: 1.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: 1.65rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.2rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Other_Games {
+        padding: 2.5rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 4rem 4rem;
+    }
+
+    #Other_Games h2 {
+        font-size: 2.2rem;
+        padding-block: 1.75rem 0.75rem;
+    }
+
+    .Games_Gallery_Buttons {
+        width: 90vw;
+        margin: 2rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: var(--Content_Gap);
+        padding: var(--Section_Padding);
+    }
+
+    .Game_Info h3 {
+        font-size: 1.65rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.25rem;
+    }
+}
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Other_Games {
+        padding: 2.75rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 5rem 5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: 2.4rem;
+        padding-block: 2rem 0.75rem;
+        border-bottom: var(--Border_Medium);
+    }
+
+    .Games_Gallery_Buttons {
+        width: 75vw;
+        margin: 2.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+    }
+
+    .Game_Info {
+        gap: 1.25rem;
+        padding: var(--Section_Padding);
+    }
+
+    .Game_Info h3 {
+        font-size: 1.7rem;
+    }
+    
+    .Game_Info p {
+        font-size: 1.35rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Other_Games {
+        padding: 3rem;
+    }
+
+    .Background_Decoration3 {
+        background-size: 5.5rem 5.5rem;
+    }
+
+    #Other_Games h2 {
+        font-size: clamp(2.6rem, 2vw, 3.2rem);
+        padding-block: 2.5rem 1rem;
+        border-bottom: var(--Border_Heavy);
+    }
+
+    .Games_Gallery_Buttons {
+        width: 70vw;
+        margin: 2.5rem auto 0 auto;
+    }
+
+    .Games_Gallery {
+        margin: 2.5rem auto;
+        max-width: 65rem;
+        max-height: 50rem;
+    }
+
+    .Game_Textbox img {
+        max-width: 65rem;
+    }
+
+    .Game_Info {
+        gap: 1.5rem;
+        padding: 2.5rem;
+    }
+
+    .Game_Info h3 {
+        font-size: clamp(1.7rem, 1.4vw, 2.1rem);
+    }
+    
+    .Game_Info p {
+        font-size: clamp(1.35rem, 1.1vw, 1.5rem);
+    }
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+
+/* || LOADING SCREEN || */
+
+@keyframes Matrix {
+    0% {
+        background-position: 0% 100%, 50% 100%, 100% 100%
+    }
+
+    100% {
+        background-position: 0% 0%, 50% 0%, 100% 0%
+    }
+}
