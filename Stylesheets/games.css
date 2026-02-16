@@ -24,7 +24,7 @@
         12.5px 12.5px;
 }
 
-#Other_Games h2 {
+#Other_Games > h2 {
     font-family: var(--Font_Title);
     border-bottom: var(--Border_Light);
     text-align: center;
@@ -37,7 +37,10 @@
     height: 100%;
 }
 
-.More_Games_Link button {
+.More_Games_Link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 75%;
     max-width: 20rem;
     height: 25%;
@@ -49,6 +52,8 @@
     font-family: var(--Font_Base);
     cursor: pointer;
     transition: all 0.3s;
+    text-align: center;
+    line-height: normal;
     z-index: 2;
 }
 
@@ -133,7 +138,7 @@
     }
 
     #Other_Games h2 {
-        font-size: clamp(1.5rem, 5vw, 2.1rem);
+        font-size: clamp(1.9rem, 5vw, 2.1rem);
         padding-block: 1rem 0;
     }
 
@@ -159,7 +164,7 @@
         font-size: clamp(0.9rem, 2.2vw, 1.8rem);
     }
 
-    .More_Games_Link button {
+    .More_Games_Link {
         padding: 1rem 1.5rem;
         margin-block: var(--Section_Padding);
         font-size: clamp(1.25rem, 2.5vw, 1.5rem);
@@ -203,7 +208,7 @@
         font-size: 1.2rem;
     }
 
-    .More_Games_Link button {
+    .More_Games_Link {
         padding: 1.25rem 1.75rem;
         margin-block: 1.75rem;
         font-size: 1.5rem;
@@ -247,7 +252,7 @@
         font-size: 1.25rem;
     }
 
-    .More_Games_Link button {
+    .More_Games_Link {
         padding: 1.5rem 2rem;
         margin-block: 2rem;
         font-size: 1.65rem;
@@ -296,7 +301,7 @@
         font-size: 1.35rem;
     }
 
-    .More_Games_Link button {
+    .More_Games_Link {
         padding: 1.75rem 2.25rem;
         margin-block: 2rem;
         font-size: 1.75rem;
@@ -352,7 +357,7 @@
         font-size: clamp(1.35rem, 1.1vw, 1.5rem);
     }
 
-    .More_Games_Link button {
+    .More_Games_Link {
         padding: 2rem 2.5rem;
         margin-block: 2.25rem;
         font-size: clamp(1.75rem, 2.5vw, 2.4rem);
@@ -362,13 +367,13 @@
 
 
 /* || INTERACTIONS / HOVERS || */
-.More_Games_Link button:hover {
+.More_Games_Link:hover {
     background: linear-gradient(135deg, #38d27f, #1f8a50);
     transform: scale(1.1);
     box-shadow: 0 0 20px #6fc5ff50;
 }
 
-.More_Games_Link button:active {
+.More_Games_Link:active {
     background: linear-gradient(135deg, #1f7a44, #196233);
     transition: all 0.15s;
     box-shadow: none;

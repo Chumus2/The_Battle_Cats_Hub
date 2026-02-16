@@ -1,0 +1,131 @@
+/* || SOCIAL MEDIA || */
+#Social_Media {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(149, 92, 255);
+    padding: var(--Content_Gap);
+    gap: var(--Section_Padding);
+    scroll-margin-top: 3rem;
+    z-index: 1;
+}
+
+.Background_Decoration4 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+
+    background: linear-gradient(
+      45deg,
+      #51328b 25%,
+      transparent 25%,
+      transparent 50%,
+      #51328b 50%,
+      #51328b 75%,
+      transparent 75%,
+      transparent
+    ),
+    linear-gradient(
+      -45deg,
+      #51328b 25%,
+      transparent 25%,
+      transparent 50%,
+      #51328b 50%,
+      #51328b 75%,
+      transparent 75%,
+      transparent
+    );
+    background-size: 1.4rem 1.4rem;
+    opacity: 0.4;
+}
+
+#Social_Media > h2 {
+    font-family: var(--Font_Title);
+    padding-block: 1rem 0;
+    border-bottom: var(--Border_Light);
+    font-size: 2rem;
+}
+
+.Social_Media_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--Section_Padding);
+}
+
+.Social_Media_Textbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 21rem;
+    background-color: var(--Color_White);
+    border: var(--Border_Black_Light);
+    border-radius: 0.5rem;
+    padding: var(--Section_Padding);
+    gap: var(--Content_Gap);
+}
+
+.Social_Media_Profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:var(--Border_Black_Light);
+    padding: 0.75rem 1rem 1.5rem 1rem;
+    gap: 2rem;
+}
+
+.Profile_Texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.15rem;
+}
+
+.Profile_Texts h3 {
+    font-size: 1.4rem;
+}
+
+.Profile_Texts p {
+    font-size: 1rem;
+}
+
+.Social_Media_Link {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 1.5rem 0.75rem 1rem 0.75rem;
+    border-top: var(--Border_Black_Light)
+}
+
+.Social_Media_Button {
+    border: 3px solid #6f3fcc;
+    border-radius: 0.5rem;
+    padding: 0.8rem 1rem;
+    background: linear-gradient(135deg, #a16cff, #6f3fcc);
+    color: var(--Color_White);
+    font-family: var(--Font_Base);
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: normal;
+    z-index: 1;
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+.Social_Media_Button:hover {
+  background: linear-gradient(135deg, #b780ff, #5f2dc0);
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #6fc5ff50;
+}
+
+.Social_Media_Button:active {
+  background: linear-gradient(135deg, #5f2dc0, #4b1f99);
+  transition: all 0.15s;
+  box-shadow: none;
+  transform: scale(0.98);
+}

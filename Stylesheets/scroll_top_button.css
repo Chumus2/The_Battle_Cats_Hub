@@ -17,13 +17,13 @@
 /* || PHONES || */
 @media (max-width: 767px) {
     #Scroll_Top_Button {
-        bottom: -5rem;
+        bottom: -5.5rem;
         max-width: 4.25rem;
         max-height: 5rem;
     }
 
     #Scroll_Top_Button.Show {
-        bottom: 3.25rem;
+        bottom: 3.75rem;
     }
 }
 

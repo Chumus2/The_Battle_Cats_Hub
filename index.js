@@ -235,7 +235,7 @@ window.addEventListener("load", () => {
 // scroll top button
 window.addEventListener("scroll", () => {
 
-    if (window.scrollY > 300) {
+    if (window.scrollY > 400) {
         Scroll_Top_Button.classList.add("Show")
     } 
     else {
@@ -245,5 +245,5 @@ window.addEventListener("scroll", () => {
 });
 
 Scroll_Top_Button.addEventListener("click", () => {
-    window.scrollTo({top: 0, behavior: "smooth"});
+    window.scrollTo({top: 0});
 });
