@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url("/Assets/Images/Background1.gif");
+    background-image: url("../Assets/Images/Background1.gif");
     background-position: center center;
     background-size: cover;
     overflow: hidden;
