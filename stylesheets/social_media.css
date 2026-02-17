@@ -305,6 +305,77 @@
     }
 }
 
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Social_Media {
+        padding: 1.75rem 1.75rem 7.25rem 1.75rem;
+        gap: 3rem;
+    }
+
+    .Background_Decoration4 {
+        background-size: 2.8rem 2.8rem;
+    }
+
+    #Social_Media > h2 {
+        padding-block: 2rem 0.75rem;
+        font-size: 2.4rem;
+        border-bottom: var(--Border_Medium);
+    }
+
+    .Social_Media_Texts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        gap: 2.5rem;
+    }
+
+    .Social_Media_Textbox:first-child {
+        grid-row: span 3;
+    }
+
+    .Social_Media_Textbox {
+        width: 30rem;
+        padding: 1.25rem;
+        gap: 2rem;
+    }
+
+    .Social_Media_Profile {
+        padding: 1.25rem 1.5rem 2rem 1.5rem;
+        gap: 2.75rem;
+    }
+
+    .Social_Media_Profile img {
+        max-width: 6rem;
+    }
+
+    .Profile_Texts {
+        gap: 0.75rem;
+    }
+
+    .Profile_Texts h3 {
+        font-size: 1.7rem;
+    }
+    
+    .Profile_Texts p {
+        font-size: 1.35rem;
+    }
+
+    :where(.Social_Media_Link, .Social_Media_Link2) {
+        padding: 2.25rem 1.5rem 1.75rem 1.5rem;
+    }
+
+    .Social_Media_Button {
+        font-size: 1.3rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .Social_Media_Page iframe {
+        width: 25rem;
+        height: 17.5rem;
+    }
+}
+
 
 /* || INTERACTIONS / HOVERS || */
 .Social_Media_Button:hover {

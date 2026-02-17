@@ -270,9 +270,9 @@ function resizeFBWidget() {
         width = 500;
         height = 900;
     } 
-    else if (window.innerWidth >= 1024) {
-        width = 350;
-        height = 800;
+    else if (window.innerWidth >= 1024 && window.innerWidth <= 1599) {
+        width = 450;
+        height = 1200;
     }
 
     FB_Page.setAttribute('data-width', width);
