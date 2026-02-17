@@ -274,6 +274,10 @@ function resizeFBWidget() {
         width = 450;
         height = 1200;
     }
+    else if (window.innerWidth >= 1600) {
+        width = 650;
+        height = 1300;
+    }
 
     FB_Page.setAttribute('data-width', width);
     FB_Page.setAttribute('data-height', height);
