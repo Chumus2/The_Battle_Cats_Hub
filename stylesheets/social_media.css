@@ -235,6 +235,76 @@
     }
 }
 
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Social_Media {
+        padding: 1.5rem 1.5rem 7rem 1.5rem;
+        gap: 2.5rem;
+    }
+
+    .Background_Decoration4 {
+        background-size: 2.4rem 2.4rem;
+    }
+
+    #Social_Media > h2 {
+        padding-block: 2rem 0.75rem;
+        font-size: 2.2rem;
+    }
+
+    .Social_Media_Texts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto auto;
+        align-items: stretch;
+        gap: 2.25rem;
+    }
+
+    .Social_Media_Textbox:first-child {
+        grid-row: span 3;
+    }
+
+    .Social_Media_Textbox {
+        width: 25rem;
+        padding: 1rem;
+        gap: 1.75rem;
+    }
+
+    .Social_Media_Profile {
+        padding: 1rem 1.25rem 1.75rem 1.25rem;
+        gap: 2.5rem;
+    }
+
+    .Social_Media_Profile img {
+        max-width: 5rem;
+    }
+
+    .Profile_Texts {
+        gap: 0.5rem;
+    }
+
+    .Profile_Texts h3 {
+        font-size: 1.65rem;
+    }
+    
+    .Profile_Texts p {
+        font-size: 1.25rem;
+    }
+
+    :where(.Social_Media_Link, .Social_Media_Link2) {
+        padding: 2rem 1.25rem 1.5rem 1.25rem;
+    }
+
+    .Social_Media_Button {
+        font-size: 1.3rem;
+        padding: 0.9rem 1.1rem;
+    }
+
+    .Social_Media_Page iframe {
+        width: 22rem;
+        height: 15rem;
+    }
+}
+
 
 /* || INTERACTIONS / HOVERS || */
 .Social_Media_Button:hover {

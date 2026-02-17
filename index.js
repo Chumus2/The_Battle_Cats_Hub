@@ -26,35 +26,35 @@ let Current_Index = 0;
 const GamesData = [
     {
         href: "https://battlecats.club/en/series/battlecats/",
-        img: "Assets/Images/The_Battle_Cats.png",
+        img: "assets/images/The_Battle_Cats.png",
         alt: "The Battle Cats Main Menu",
         title: "The Battle Cats",
         desc: "An iconic tower defense experience where you build an army of crazy cats."
     },
     {
         href: "https://battlecats.club/en/series/odorobo/",
-        img: "Assets/Images/The_Burgle_Cats.png",
+        img: "assets/images/The_Burgle_Cats.png",
         alt: "The Burgle Cats Main Menu",
         title: "The Burgle Cats",
         desc: "A quirky game where sneaky cats dodge traps and outsmart guards."
     },
     {
         href: "https://battlecats.club/en/series/mightycat/",
-        img: "Assets/Images/Let_Go_MightyCat.png",
+        img: "assets/images/Let_Go_MightyCat.png",
         alt: "Let's Go MightyCat Main Menu",
         title: "Let's Go MightyCat!",
         desc: "Fast action, unstoppable power, and a cat that never slows down."
     },
     {
         href: "https://battlecats.club/en/series/hopping/",
-        img: "Assets/Images/Go_Go_PogoCat.png",
+        img: "assets/images/Go_Go_PogoCat.png",
         alt: "Go Go PogoCat Main Menu",
         title: "Go Go PogoCat!",
         desc: "Pogo-jumping cat bounces through stages, dodging obstacles and defeating enemies."
     },
     {
         href: "https://battlecats.club/en/series/futaride/",
-        img: "Assets/Images/The_Battle_Cats_Unite.png",
+        img: "assets/images/The_Battle_Cats_Unite.png",
         alt: "The Battle Cats Unite Main Menu",
         title: "The Battle Cats Unite",
         desc: "A console version of the iconic tower defense game with cats, stages, and local co-op."
@@ -271,8 +271,8 @@ function resizeFBWidget() {
         height = 900;
     } 
     else if (window.innerWidth >= 1024) {
-        width = 600;
-        height = 1000;
+        width = 350;
+        height = 800;
     }
 
     FB_Page.setAttribute('data-width', width);
