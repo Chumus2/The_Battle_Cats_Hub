@@ -22,7 +22,7 @@ const Game_Link = Games;
 const Game_Title = Games.querySelector("h3");
 const Game_Description = Games.querySelector("p");
 
-let current_Index = 0;
+let Current_Index = 0;
 const GamesData = [
     {
         href: "https://battlecats.club/en/series/battlecats/",
@@ -70,6 +70,7 @@ fetch("./translations.json")
 
     const saved_Language = localStorage.getItem("language") || "EN";
     Change_Language(saved_Language);
+    Show_Game(Current_Index)
   })
   .catch(err => {
     console.error("Failed to load translations:", err);
@@ -102,6 +103,8 @@ function Change_Language(language) {
     if (Active_Button) {
         Active_Button.classList.add("Selected")
     };
+
+    Show_Game(Current_Index)
 
 };
 
@@ -167,24 +170,30 @@ Trailer_Overlay.addEventListener("click", Close_Trailer);
 
 // games gallery
 function Show_Game(index) {
-    const game = GamesData[index];
-    Game_Link.href = game.href;
-    Game_Image.src = game.img;
-    Game_Image.alt = game.alt;
-    Game_Title.textContent = game.title;
-    Game_Description.textContent = game.desc;
+
+    const Game = GamesData[index];
+    const Current_Language = localStorage.getItem("language") || "EN";
+
+    Game_Link.href = Game.href;
+    Game_Image.src = Game.img;
+    Game_Image.alt = Game.alt;
+
+    const Game_Key = Game.title.replace(/\s+/g, "_").replace(/[^\w]/g, ""); 
+    const Translations_For_Language = Translations[Current_Language] || Translations["EN"];
+
+    Game_Title.textContent = Game.title;
+    Game_Description.textContent = Translations_For_Language[`${Game_Key}_Description`] || Game.desc;
+
 }
 
-Show_Game(current_Index)
-
 Next_Button.addEventListener('click', () => {
-    current_Index = (current_Index + 1) % GamesData.length;
-    Show_Game(current_Index);
+    Current_Index = (Current_Index + 1) % GamesData.length;
+    Show_Game(Current_Index);
 });
 
 Back_Button.addEventListener('click', () => {
-    current_Index = (current_Index - 1 + GamesData.length) % GamesData.length;
-    Show_Game(current_Index);
+    Current_Index = (Current_Index - 1 + GamesData.length) % GamesData.length;
+    Show_Game(Current_Index);
 });
 
 
