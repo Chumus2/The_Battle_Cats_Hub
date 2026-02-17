@@ -256,3 +256,33 @@ window.addEventListener("scroll", () => {
 Scroll_Top_Button.addEventListener("click", () => {
     window.scrollTo({top: 0});
 });
+
+
+// facebook widget size
+function resizeFBWidget() {
+
+    const FB_Page = document.querySelector('.fb-page');
+    if (!FB_Page) return;
+
+    let width = 300, height = 700;
+
+    if (window.innerWidth >= 768 && window.innerWidth <= 1023) {
+        width = 500;
+        height = 900;
+    } 
+    else if (window.innerWidth >= 1024) {
+        width = 600;
+        height = 1000;
+    }
+
+    FB_Page.setAttribute('data-width', width);
+    FB_Page.setAttribute('data-height', height);
+
+    if (window.FB && FB.XFBML) {
+        FB.XFBML.parse(FB_Page.parentNode);
+    }
+
+}
+
+window.addEventListener('load', resizeFBWidget);
+window.addEventListener('resize', resizeFBWidget);

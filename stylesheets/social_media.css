@@ -64,6 +64,7 @@
 }
 
 .Social_Media_Profile {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +72,7 @@
 }
 
 .Social_Media_Link {
+    width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -78,6 +80,7 @@
 }
 
 .Social_Media_Link2 {
+    width: 100%;
     display: flex;
     justify-content: center;
     position: relative;
@@ -91,8 +94,15 @@
     font-family: var(--Font_Base);
     cursor: pointer;
     transition: all 0.3s;
+    text-align: center;
     line-height: normal;
     z-index: 1;
+}
+
+.Social_Media_Page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* || PHONES || */
@@ -129,6 +139,10 @@
         gap: 2rem;
     }
 
+    .Social_Media_Profile img {
+        max-width: 4.25rem;
+    }
+
     .Profile_Texts {
         gap: 0.15rem;
     }
@@ -141,16 +155,83 @@
         font-size: clamp(0.9rem, 1.5vw, 1.2rem);
     }
 
-    .Social_Media_Link {
-        padding: 1.5rem 0.75rem 1rem 0.75rem;
-    }
-
-    .Social_Media_Link2 {
+    :where(.Social_Media_Link, .Social_Media_Link2) {
         padding: 1.5rem 0.75rem 1rem 0.75rem;
     }
 
     .Social_Media_Button {
+        font-size: clamp(1rem, 2.5vw, 1.25rem);
         padding: 0.8rem 1rem;
+    }
+
+    .Social_Media_Page iframe {
+        width: 17.5rem;
+        height: 12rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Social_Media {
+        padding: 1.25rem 1.25rem 6.75rem 1.25rem;
+        gap: 2rem;
+    }
+
+    .Background_Decoration4 {
+        background-size: 1.75rem 1.75rem;
+    }
+
+    #Social_Media > h2 {
+        padding-block: 1.5rem 0.5rem;
+        font-size: var(--H2_Size);
+    }
+
+    .Social_Media_Texts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .Social_Media_Textbox {
+        width: 35rem;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .Social_Media_Profile {
+        padding: 0.75rem 1rem 1.5rem 1rem;
+        gap: 2rem;
+    }
+
+    .Social_Media_Profile img {
+        max-width: 5.5rem;
+    }
+
+    .Profile_Texts {
+        gap: 0.3rem;
+    }
+
+    .Profile_Texts h3 {
+        font-size: 1.6rem;
+    }
+    
+    .Profile_Texts p {
+        font-size: 1.2rem;
+    }
+
+    :where(.Social_Media_Link, .Social_Media_Link2) {
+        padding: 1.75rem 1rem 1.25rem 1rem;
+    }
+
+    .Social_Media_Button {
+        font-size: 1.25rem;
+        padding: 1rem 1.2rem;
+    }
+
+    .Social_Media_Page iframe {
+        width: 27.5rem;
+        height: 18.5rem;
     }
 }
 
