@@ -102,3 +102,28 @@
         margin: 2.5rem 2rem;
     }
 }
+
+/* || DESKTOPS || */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    #Merchandise {
+        padding: 1.75rem;
+    }
+
+    .Background_Decoration5 {
+        background: repeating-linear-gradient(45deg, #c1121f, #c1121f 2rem, #780000 2rem, #780000 3.5rem);
+    }
+
+    #Merchandise h2 {
+        font-size: 2.4rem;
+        padding-block: 2rem 0.75rem;
+        border-bottom: var(--Border_Medium);
+    }
+
+    .Merchandise_Texts {
+        margin: 2.75rem 2.25rem;
+    }
+
+    .Merchandise_Texts img {
+        max-width: 65rem;
+    }
+}
