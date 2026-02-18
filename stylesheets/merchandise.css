@@ -30,6 +30,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 85vw;
     height: 100%;
 }
 
@@ -79,5 +80,25 @@
     .Merchandise_Texts {
         width: 85vw;
         margin: 2.25rem 1.75rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Merchandise {
+        padding: 1.5rem;
+    }
+
+    .Background_Decoration5 {
+        background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.75rem, #780000 1.75rem, #780000 3.25rem);
+    }
+
+    #Merchandise h2 {
+        font-size: 2.2rem;
+        padding-block: 2rem 0.75rem;
+    }
+
+    .Merchandise_Texts {
+        margin: 2.5rem 2rem;
     }
 }
