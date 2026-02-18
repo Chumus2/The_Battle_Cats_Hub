@@ -27,11 +27,15 @@
 }
 
 .Merchandise_Texts {
+    width: 85vw;
+    height: 100%;
+}
+
+.Merchandise_Texts a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 85vw;
-    height: 100%;
+    width: 100%;
 }
 
 .Merchandise_Texts img {
@@ -121,6 +125,31 @@
 
     .Merchandise_Texts {
         margin: 2.75rem 2.25rem;
+    }
+
+    .Merchandise_Texts img {
+        max-width: 55rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Merchandise {
+        padding: 2rem;
+    }
+
+    .Background_Decoration5 {
+        background: repeating-linear-gradient(45deg, #c1121f, #c1121f 2.5rem, #780000 2.5rem, #780000 4rem);
+    }
+
+    #Merchandise h2 {
+        font-size: clamp(2.4rem, 2vw, 3rem);
+        padding-block: 2.5rem 1rem;
+        border-bottom: var(--Border_Heavy);
+    }
+
+    .Merchandise_Texts {
+        margin: 3rem 2.5rem;
     }
 
     .Merchandise_Texts img {
