@@ -213,7 +213,6 @@ header {
 
     .Content_Box {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
     }
 
     .Languages_Menu {
@@ -316,6 +315,7 @@ header {
 
     .Languages_Menu button {
         font-size: clamp(1.5rem, 1vw, 1.8rem);
+        gap: 1.5rem;
     }
 
     .Controls {

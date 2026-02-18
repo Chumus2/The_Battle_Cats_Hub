@@ -44,7 +44,9 @@
         "Go_Go_PogoCat_Description": "A fun arcade action game by PONOS where a pogo-jumping cat bounces through stages, dodging obstacles and defeating enemies.",
         "The_Battle_Cats_Unite_Description": "A console version of the iconic tower defense game with cats, stages, and local co-op support.",
         "Social_Media": "Social Media",
-        "Facebook_Account": "Official Facebook Account"
+        "Facebook_Account": "Official Facebook Account",
+        "Merchandise": "Merchandise",
+        "Merchandise_Title": "Merchandise"
 
     },
 
@@ -92,8 +94,10 @@
         "Go_Go_PogoCat_Description": "Ein witziges Arcade-Actionspiel von PONOS, in dem eine pogospringende Katze durch Level hüpft, Hindernissen ausweicht und Feinde besiegt.",
         "The_Battle_Cats_Unite_Description": "Eine Konsolenversion des legendären Tower-Defense-Spiels mit Katzen, Levels und lokalem Koop-Modus.",
         "Social_Media": "Soziale Medien",
-        "Facebook_Account": "Offizieller Facebook-Account"
-
+        "Facebook_Account": "Offizieller Facebook-Account",
+        "Merchandise": "Waren",
+        "Merchandise_Title": "Waren"
+        
     },
 
     "FR": {
@@ -140,7 +144,9 @@
         "Go_Go_PogoCat_Description": "Un jeu d'arcade amusant de PONOS où un chat sautant à la perche traverse des niveaux en esquivant les obstacles et en vainquant des ennemis.",
         "The_Battle_Cats_Unite_Description": "Une version console du jeu emblématique de tower defense avec des chats, des niveaux et un mode coopératif local.",
         "Social_Media": "Réseaux sociaux",
-        "Facebook_Account": "Compte Facebook officiel"
+        "Facebook_Account": "Compte Facebook officiel",
+        "Merchandise": "Marchandises",
+        "Merchandise_Title": "Marchandises"
 
     },
 
@@ -188,7 +194,9 @@
         "Go_Go_PogoCat_Description": "Un divertido juego de acción arcade de PONOS en el que un gato saltador rebota por los escenarios, esquivando obstáculos y derrotando enemigos.",
         "The_Battle_Cats_Unite_Description": "Una versión de consola del icónico juego de defensa de torres con gatos, escenarios y soporte cooperativo local.",
         "Social_Media": "Redes Sociales",
-        "Facebook_Account": "Cuenta oficial de Facebook"
+        "Facebook_Account": "Cuenta oficial de Facebook",
+        "Merchandise": "Mercancías",
+        "Merchandise_Title": "Mercancías"
 
     },
 
@@ -236,7 +244,9 @@
         "Go_Go_PogoCat_Description": "Un divertente gioco arcade d'azione di PONOS in cui un gatto saltatore rimbalza attraverso i livelli, schivando ostacoli e sconfiggendo nemici.",
         "The_Battle_Cats_Unite_Description": "Una versione per console dell'iconico gioco tower defense con gatti, livelli e supporto cooperativo locale.",
         "Social_Media": "Social media",
-        "Facebook_Account": "Conto Facebook ufficiale"
+        "Facebook_Account": "Conto Facebook ufficiale",
+        "Merchandise": "Merce",
+        "Merchandise_Title": "Merce"
 
     }
 

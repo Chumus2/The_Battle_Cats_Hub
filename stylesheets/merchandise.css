@@ -1,0 +1,60 @@
+/* || MERCHANDISE || */
+#Merchandise {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #cc3030;
+    scroll-margin-top: 3rem;
+    z-index: 1;
+}
+
+.Background_Decoration5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    inset: 0;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+#Merchandise h2 {
+    font-family: var(--Font_Title);
+    border-bottom: var(--Border_Light);
+}
+
+.Merchandise_Texts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90vw;
+    height: 100%;
+}
+
+.Merchandise_Texts img {
+    width: 100%;
+    max-width: 50rem;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    #Merchandise {
+        padding: var(--Content_Gap);
+    }
+
+    .Background_Decoration5 {
+        background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.25rem, #780000 1.25rem, #780000 2.5rem);
+    }
+
+    #Merchandise h2 {
+        font-size: clamp(1.75rem, 5vw, 2.1rem);
+        padding-block: 1rem 0;
+    }
+
+    .Merchandise_Texts {
+        margin: 2rem 1rem;
+    }
+}
