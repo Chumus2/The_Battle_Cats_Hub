@@ -81,7 +81,7 @@
     }
 
     .Youtubers_Gallery_Buttons {
-        top: 52.5%;
+        top: 57.5%;
         padding: 0 0.5rem;
     }
 }
@@ -115,4 +115,35 @@
         top: 57.5%;
         padding: 0.25rem 0.75rem;
     }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    #Youtubers {
+        padding: 0rem 1.5rem 2rem 1.5rem;
+    }
+
+    .Background_Decoration6 {
+        background-size: 2.8rem 2.8rem;
+    }
+
+    #Youtubers h2 {
+        font-size: 2.2rem;
+        padding-block: 1.75rem 0.75rem;
+    }
+
+    .Youtubers_Gallery {
+        gap: 1.5rem;
+        margin: 2.5rem 1.5rem;
+    }
+
+    .Youtuber_Profile {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .Youtubers_Gallery_Buttons {
+        top: 57.5%;
+        padding: 0.5rem 1rem;
+    } 
 }
