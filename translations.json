@@ -46,7 +46,9 @@
         "Social_Media": "Social Media",
         "Facebook_Account": "Official Facebook Account",
         "Merchandise": "Merchandise",
-        "Merchandise_Title": "Merchandise"
+        "Merchandise_Title": "Merchandise",
+        "Youtubers": "Youtubers",
+        "Youtuber_Title": "Youtubers"
 
     },
 
@@ -96,7 +98,9 @@
         "Social_Media": "Soziale Medien",
         "Facebook_Account": "Offizieller Facebook-Account",
         "Merchandise": "Waren",
-        "Merchandise_Title": "Waren"
+        "Merchandise_Title": "Waren",
+        "Youtubers": "YouTuber",
+        "Youtuber_Title": "YouTuber"
         
     },
 
@@ -146,7 +150,9 @@
         "Social_Media": "Réseaux sociaux",
         "Facebook_Account": "Compte Facebook officiel",
         "Merchandise": "Marchandises",
-        "Merchandise_Title": "Marchandises"
+        "Merchandise_Title": "Marchandises",
+        "Youtubers": "Youtubeuses",
+        "Youtuber_Title": "Youtubeuses"
 
     },
 
@@ -196,7 +202,9 @@
         "Social_Media": "Redes Sociales",
         "Facebook_Account": "Cuenta oficial de Facebook",
         "Merchandise": "Mercancías",
-        "Merchandise_Title": "Mercancías"
+        "Merchandise_Title": "Mercancías",
+        "Youtubers": "Youtubers",
+        "Youtuber_Title": "Youtubers"
 
     },
 
@@ -246,7 +254,9 @@
         "Social_Media": "Social media",
         "Facebook_Account": "Conto Facebook ufficiale",
         "Merchandise": "Merce",
-        "Merchandise_Title": "Merce"
+        "Merchandise_Title": "Merce",
+        "Youtubers": "Youtuber",
+        "Youtuber_Title": "Youtuber"
 
     }
 

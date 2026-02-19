@@ -75,6 +75,7 @@ a {
     --Border_Light: 3px solid rgba(0, 0, 0, 0.212);
     --Border_Medium: 5px solid rgba(0, 0, 0, 0.212);
     --Border_Heavy: 6px solid rgba(0, 0, 0, 0.212);
+    --Border_Medium2: 5px solid rgba(0, 0, 0, 0.5);
     --Border_Black_Light: 3px solid rgba(0, 0, 0, 1);
     --Border_Black_Medium: 5px solid rgba(0, 0, 0, 1);
     --Border_Black_Heavy: 6px solid rgba(0, 0, 0, 1);

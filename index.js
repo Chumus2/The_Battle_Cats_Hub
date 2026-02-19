@@ -290,3 +290,80 @@ function resizeFBWidget() {
 
 window.addEventListener('load', resizeFBWidget);
 window.addEventListener('resize', resizeFBWidget);
+
+
+// youtubers gallery
+document.addEventListener("DOMContentLoaded", () => {
+
+    const Gallery = document.querySelector(".Youtubers_Gallery");
+    const Next_Button2 = document.querySelector(".Next_Button2");
+    const Back_Button2 = document.querySelector(".Back_Button2");
+
+    let Scroll_Amount = 0;
+    let Is_Paused = false;
+    const Speed = 0.25;
+
+    Gallery.innerHTML += Gallery.innerHTML;
+    Gallery.addEventListener("mouseenter", () => Is_Paused = true);
+    Gallery.addEventListener("mouseleave", () => Is_Paused = false);
+
+    function Auto_Scroll() {
+
+        if (!Is_Paused) {
+
+            Scroll_Amount += Speed;
+            Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+
+            const First_Item = Gallery.firstElementChild;
+            const Gap = parseFloat(getComputedStyle(Gallery).gap);
+            const First_Width = First_Item.offsetWidth + Gap;
+
+            if (Scroll_Amount >= First_Width) {
+
+                Gallery.appendChild(First_Item);
+                Scroll_Amount = 0;
+                Gallery.style.transform = `translateX(0px)`;
+
+            }
+
+        }
+
+        requestAnimationFrame(Auto_Scroll);
+    }
+
+    Auto_Scroll();
+
+    function Scroll_Next() {
+
+        const First_Item = Gallery.firstElementChild;
+        const Gap = parseFloat(getComputedStyle(Gallery).gap);
+        const Step = First_Item.offsetWidth + Gap;
+
+        Scroll_Amount += Step;
+        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+
+        Gallery.appendChild(First_Item);
+        Scroll_Amount -= Step;
+        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+
+    }
+
+    function Scroll_Back() {
+
+        const Last_Item = Gallery.lastElementChild;
+        const Gap = parseFloat(getComputedStyle(Gallery).gap);
+        const Step = Last_Item.offsetWidth + Gap;
+
+        Gallery.insertBefore(Last_Item, Gallery.firstElementChild);
+        Scroll_Amount += Step;
+        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+
+        Scroll_Amount -= Step;
+        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+
+    }
+
+    Next_Button2.addEventListener("click", Scroll_Next);
+    Back_Button2.addEventListener("click", Scroll_Back);
+
+});
