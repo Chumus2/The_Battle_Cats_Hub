@@ -47,8 +47,12 @@
 
 .Youtubers_Gallery_Buttons {
     width: 100%;
-    top: 52.5%;
     left: 0;
+}
+
+.Youtubers_Gallery_Buttons button {
+    max-width: 5em; 
+    max-height: 5em;
 }
 
 /* || PHONES || */
@@ -61,7 +65,7 @@
         background-size: 2rem 2rem;
     }
 
-    #Youtbuers h2 {
+    #Youtubers h2 {
         font-size: clamp(1.75rem, 5vw, 2.1rem);
         padding-block: 1rem 0;
     }
@@ -77,6 +81,38 @@
     }
 
     .Youtubers_Gallery_Buttons {
+        top: 52.5%;
         padding: 0 0.5rem;
+    }
+}
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #Youtubers {
+        padding: 0rem 1.25rem 1.75rem 1.25rem;
+    }
+
+    .Background_Decoration6 {
+        background-size: 2.5rem 2.5rem;
+    }
+
+    #Youtubers h2 {
+        font-size: var(--H2_Size);
+        padding-block: 1.5rem 0.5rem;
+    }
+
+    .Youtubers_Gallery {
+        gap: 1.25rem;
+        margin: 2.25rem 1.25rem;
+    }
+
+    .Youtuber_Profile {
+        width: 9rem;
+        height: 9rem;
+    }
+
+    .Youtubers_Gallery_Buttons {
+        top: 57.5%;
+        padding: 0.25rem 0.75rem;
     }
 }
