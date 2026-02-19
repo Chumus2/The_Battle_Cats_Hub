@@ -161,7 +161,7 @@
     #Youtubers h2 {
         font-size: 2.4rem;
         padding-block: 2rem 0.75rem;
-        border-bottom: var(--Border_Medium2);
+        border-bottom: var(--Border_Medium);
     }
 
     .Youtubers_Gallery {
@@ -174,8 +174,48 @@
         height: 10rem;
     }
 
+    .Youtuber_Profile img {
+        border: var(--Border_Medium2);
+    }
+
     .Youtubers_Gallery_Buttons {
         top: 59%;
         padding: 0.5rem 1rem;
+    } 
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    #Youtubers {
+        padding: 0rem 2rem 2.5rem 2rem;
+    }
+
+    .Background_Decoration6 {
+        background-size: 3.3rem 3.3rem;
+    }
+
+    #Youtubers h2 {
+        font-size: clamp(2.6rem, 2vw, 3.2rem);
+        padding-block: 2.5rem 1rem;
+        border-bottom: var(--Border_Heavy);
+    }
+
+    .Youtubers_Gallery {
+        gap: 1.5rem;
+        margin: 2.75rem 1.75rem;
+    }
+
+    .Youtuber_Profile {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    .Youtuber_Profile img {
+        border: var(--Border_Heavy2);
+    }
+
+    .Youtubers_Gallery_Buttons {
+        top: 60%;
+        padding: 0.75rem 1.25rem;
     } 
 }
