@@ -32,9 +32,12 @@ footer {
 /* || PHONES || */
 @media (max-width: 767px) {
     footer {
-        flex-direction: column;
         padding: var(--Section_Padding);
         gap: var(--Content_Gap);
+    }
+
+    .Footer_Texts {
+        flex-direction: column;
     }
 
     .Footer_Links {
@@ -70,6 +73,10 @@ footer {
         gap: 1.25rem;
     }
 
+    .Footer_Texts {
+        flex-direction: column;
+    }
+
     .Footer_Links {
         gap: 1.25rem;
     }
@@ -98,7 +105,6 @@ footer {
 /* || NOTEBOOKS || */
 @media (min-width: 1024px) and (max-width: 1279px) {
     footer {
-        flex-direction: column;
         padding: 2rem;
         gap: 1.5rem;
     }
@@ -125,5 +131,37 @@ footer {
 
     footer > h3 {
         font-size: 1.6rem;
+    }
+}
+
+/* || DESKTOPS */
+@media (min-width: 1280px) and (max-width: 1599px) {
+    footer {
+        padding: 2.25rem;
+        gap: 1.75rem;
+    }
+
+    .Footer_Links {
+        gap: 2.25rem;
+    }
+
+    .Footer_Links > img {
+        max-width: 4rem;
+    }
+
+    .Ponos_Button img {
+        max-width: 10rem;
+    }
+
+    .Copyright_Textbox {
+        gap: 1.75rem;
+    }
+
+    .Copyright_Textbox a {
+        font-size: 1.6rem;
+    }
+
+    footer > h3 {
+        font-size: 1.7rem;
     }
 }
