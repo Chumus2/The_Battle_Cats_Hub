@@ -6,18 +6,15 @@ footer {
     justify-content: center;
     width: 100%;
     overflow: hidden;
-    padding: var(--Section_Padding);
-    gap: var(--Content_Gap);
     background-color: var(--Color_White);
     z-index: 1;
 }
 
 .Footer_Texts {
+    width: 75%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: var(--Content_Gap);
 }
 
 .Footer_Links {
@@ -95,5 +92,38 @@ footer {
 
     footer > h3 {
         font-size: 1.5rem;
+    }
+}
+
+/* || NOTEBOOKS || */
+@media (min-width: 1024px) and (max-width: 1279px) {
+    footer {
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1.5rem;
+    }
+
+    .Footer_Links {
+        gap: 2rem;
+    }
+
+    .Footer_Links > img {
+        max-width: 5rem;
+    }
+
+    .Ponos_Button img {
+        max-width: 10rem;
+    }
+
+    .Copyright_Textbox {
+        gap: 1.5rem;
+    }
+
+    .Copyright_Textbox a {
+        font-size: 1.5rem;
+    }
+
+    footer > h3 {
+        font-size: 1.6rem;
     }
 }
