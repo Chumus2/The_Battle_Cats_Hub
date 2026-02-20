@@ -48,7 +48,10 @@
         "Merchandise": "Merchandise",
         "Merchandise_Title": "Merchandise",
         "Youtubers": "Youtubers",
-        "Youtuber_Title": "Youtubers"
+        "Youtuber_Title": "Youtubers",
+        "Reserved": "© PONOS Corp. all rights reserved.",
+        "Copyright": "Copyright",
+        "Privacy_Policy": "Privacy Policy"
 
     },
 
@@ -100,7 +103,10 @@
         "Merchandise": "Waren",
         "Merchandise_Title": "Waren",
         "Youtubers": "YouTuber",
-        "Youtuber_Title": "YouTuber"
+        "Youtuber_Title": "YouTuber",
+        "Reserved": "© PONOS Corp. Alle Rechte vorbehalten.",
+        "Copyright": "Copyright",
+        "Privacy_Policy": "Datenschutzrichtlinie"
         
     },
 
@@ -152,7 +158,10 @@
         "Merchandise": "Marchandises",
         "Merchandise_Title": "Marchandises",
         "Youtubers": "Youtubeuses",
-        "Youtuber_Title": "Youtubeuses"
+        "Youtuber_Title": "Youtubeuses",
+        "Reserved": "© PONOS Corp. Tous droits réservés.",
+        "Copyright": "Droit d'auteur",
+        "Privacy_Policy": "politique de confidentialité"
 
     },
 
@@ -204,7 +213,10 @@
         "Merchandise": "Mercancías",
         "Merchandise_Title": "Mercancías",
         "Youtubers": "Youtubers",
-        "Youtuber_Title": "Youtubers"
+        "Youtuber_Title": "Youtubers",
+        "Reserved": "© PONOS Corp. todos los derechos reservados.",
+        "Copyright": "Derechos de autor",
+        "Privacy_Policy": "política de privacidad"
 
     },
 
@@ -256,7 +268,10 @@
         "Merchandise": "Merce",
         "Merchandise_Title": "Merce",
         "Youtubers": "Youtuber",
-        "Youtuber_Title": "Youtuber"
+        "Youtuber_Title": "Youtuber",
+        "Reserved": "© PONOS Corp. tutti i diritti riservati.",
+        "Copyright": "Copyright",
+        "Privacy_Policy": "politica sulla riservatezza"
 
     }
 

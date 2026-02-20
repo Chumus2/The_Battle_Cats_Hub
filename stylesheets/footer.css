@@ -1,0 +1,66 @@
+/* || FOOTER || */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+    padding: var(--Section_Padding);
+    gap: var(--Content_Gap);
+    background-color: var(--Color_White);
+    z-index: 1;
+}
+
+.Footer_Texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--Content_Gap);
+}
+
+.Footer_Links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Copyright_Textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* || PHONES || */
+@media (max-width: 767px) {
+    footer {
+        flex-direction: column;
+        padding: var(--Section_Padding);
+        gap: var(--Content_Gap);
+    }
+
+    .Footer_Links {
+        gap: var(--Content_Gap);
+    }
+
+    .Footer_Links > img {
+        max-width: 3rem;
+    }
+
+    .Ponos_Button img {
+        max-width: 7.5rem;
+    }
+
+    .Copyright_Textbox {
+        gap: var(--Content_Gap);
+    }
+
+    .Copyright_Textbox a {
+        font-size: clamp(1.25rem, 1vw, 1.5rem);
+    }
+
+    footer > h3 {
+        font-size: clamp(1.3rem, 1vw, 1.8rem);
+    }
+}
