@@ -27,6 +27,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-decoration: underline;
 }
 
 /* || PHONES || */
@@ -163,5 +164,37 @@ footer {
 
     footer > h3 {
         font-size: 1.7rem;
+    }
+}
+
+/* || BIG MONITORS || */
+@media (min-width: 1600px) {
+    footer {
+        padding: 2.5rem;
+        gap: 2rem;
+    }
+
+    .Footer_Links {
+        gap: 2.5rem;
+    }
+
+    .Footer_Links > img {
+        max-width: 4rem;
+    }
+
+    .Ponos_Button img {
+        max-width: 10rem;
+    }
+
+    .Copyright_Textbox {
+        gap: 2rem;
+    }
+
+    .Copyright_Textbox a {
+        font-size: clamp(1.65rem, 1.2vw, 2rem);
+    }
+
+    footer > h3 {
+        font-size: clamp(1.75rem, 1.3vw, 2.1rem);
     }
 }
