@@ -64,3 +64,36 @@ footer {
         font-size: clamp(1.3rem, 1vw, 1.8rem);
     }
 }
+
+/* || TABLETS || */
+@media (min-width: 768px) and (max-width: 1023px) {
+    footer {
+        flex-direction: column;
+        padding: 1.75rem;
+        gap: 1.25rem;
+    }
+
+    .Footer_Links {
+        gap: 1.25rem;
+    }
+
+    .Footer_Links > img {
+        max-width: 4rem;
+    }
+
+    .Ponos_Button img {
+        max-width: 9rem;
+    }
+
+    .Copyright_Textbox {
+        gap: 1.25rem;
+    }
+
+    .Copyright_Textbox a {
+        font-size: 1.4rem;
+    }
+
+    footer > h3 {
+        font-size: 1.5rem;
+    }
+}
