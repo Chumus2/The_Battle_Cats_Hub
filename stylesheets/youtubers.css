@@ -32,6 +32,7 @@
 .Youtubers_Gallery {
     display: flex;
     justify-content: center;
+    will-change: transform;
 }
 
 .Youtuber_Profile {

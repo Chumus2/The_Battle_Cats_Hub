@@ -301,6 +301,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let Scroll_Amount = 0;
     let Is_Paused = false;
+    let Is_Animating = false;
     const Speed = 0.25;
 
     Gallery.innerHTML += Gallery.innerHTML;
@@ -309,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function Auto_Scroll() {
 
-        if (!Is_Paused) {
+        if (!Is_Paused && !Is_Animating) {
 
             Scroll_Amount += Speed;
             Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
@@ -320,12 +321,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (Scroll_Amount >= First_Width) {
 
+                Gallery.style.transition = "none";
                 Gallery.appendChild(First_Item);
                 Scroll_Amount = 0;
-                Gallery.style.transform = `translateX(0px)`;
-
+                Gallery.style.transform = "translateX(0px)";
             }
-
         }
 
         requestAnimationFrame(Auto_Scroll);
@@ -333,34 +333,85 @@ document.addEventListener("DOMContentLoaded", () => {
 
     Auto_Scroll();
 
+    // =========================
+    // NEXT
+    // =========================
+
     function Scroll_Next() {
 
+        if (Is_Animating) return;
+    
+        Is_Animating = true;
+        Is_Paused = true;
+    
         const First_Item = Gallery.firstElementChild;
         const Gap = parseFloat(getComputedStyle(Gallery).gap);
         const Step = First_Item.offsetWidth + Gap;
 
-        Scroll_Amount += Step;
-        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
-
-        Gallery.appendChild(First_Item);
-        Scroll_Amount -= Step;
-        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
-
+        Scroll_Amount = 0;
+        Gallery.style.transition = "none";
+        Gallery.style.transform = "translateX(0px)";
+    
+        requestAnimationFrame(() => {
+    
+            Gallery.style.transition = "transform 0.5s ease";
+            Gallery.style.transform = `translateX(-${Step}px)`;
+    
+        });
+    
+        function Handler() {
+    
+            Gallery.style.transition = "none";
+            Gallery.appendChild(First_Item);
+    
+            Gallery.style.transform = "translateX(0px)";
+            Scroll_Amount = 0;
+    
+            Gallery.removeEventListener("transitionend", Handler);
+    
+            Is_Animating = false;
+            Is_Paused = false;
+        }
+    
+        Gallery.addEventListener("transitionend", Handler);
     }
 
+    // =========================
+    // BACK
+    // =========================
+
     function Scroll_Back() {
+
+        if (Is_Animating) return;
+
+        Is_Animating = true;
+        Is_Paused = true;
 
         const Last_Item = Gallery.lastElementChild;
         const Gap = parseFloat(getComputedStyle(Gallery).gap);
         const Step = Last_Item.offsetWidth + Gap;
 
+        Gallery.style.transition = "none";
         Gallery.insertBefore(Last_Item, Gallery.firstElementChild);
-        Scroll_Amount += Step;
+
+        Scroll_Amount = Step;
         Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
 
-        Scroll_Amount -= Step;
-        Gallery.style.transform = `translateX(-${Scroll_Amount}px)`;
+        requestAnimationFrame(() => {
 
+            Gallery.style.transition = "transform 0.5s ease";
+            Scroll_Amount = 0;
+            Gallery.style.transform = "translateX(0px)";
+        });
+
+        function Handler() {
+
+            Gallery.removeEventListener("transitionend", Handler);
+            Is_Animating = false;
+            Is_Paused = false;
+        }
+
+        Gallery.addEventListener("transitionend", Handler);
     }
 
     Next_Button2.addEventListener("click", Scroll_Next);
