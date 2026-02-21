@@ -12,6 +12,14 @@
     z-index: 1;
 }
 
+#Lizard_Cat {
+    position: absolute;
+    pointer-events: none;
+    width: 25vw;
+    right: 1.5%;
+    transform: translateY(-50%) rotate(6deg);
+}
+
 .Background_Decoration5 {
     position: absolute;
     width: 100%;
@@ -51,6 +59,11 @@
         padding: var(--Content_Gap);
     }
 
+    #Lizard_Cat {
+        max-width: 11rem;
+        bottom: -15%;
+    }
+
     .Background_Decoration5 {
         background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.25rem, #780000 1.25rem, #780000 2.5rem);
     }
@@ -70,6 +83,11 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     #Merchandise {
         padding: 1.25rem;
+    }
+
+    #Lizard_Cat {
+        max-width: 12rem;
+        bottom: -20%;
     }
 
     .Background_Decoration5 {
@@ -93,6 +111,11 @@
         padding: 1.5rem;
     }
 
+    #Lizard_Cat {
+        max-width: 12.5rem;
+        bottom: -18.5%;
+    }
+
     .Background_Decoration5 {
         background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.75rem, #780000 1.75rem, #780000 3.25rem);
     }
@@ -111,6 +134,11 @@
 @media (min-width: 1280px) and (max-width: 1599px) {
     #Merchandise {
         padding: 1.75rem;
+    }
+
+    #Lizard_Cat {
+        max-width: 14rem;
+        bottom: -18.5%;
     }
 
     .Background_Decoration5 {
@@ -136,6 +164,11 @@
 @media (min-width: 1600px) {
     #Merchandise {
         padding: 2rem;
+    }
+
+    #Lizard_Cat {
+        max-width: 15rem;
+        bottom: -17%;
     }
 
     .Background_Decoration5 {

@@ -302,7 +302,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let Scroll_Amount = 0;
     let Is_Paused = false;
     let Is_Animating = false;
-    const Speed = 0.25;
+    const Speed = 0.5;
 
     Gallery.innerHTML += Gallery.innerHTML;
     Gallery.addEventListener("mouseenter", () => Is_Paused = true);
