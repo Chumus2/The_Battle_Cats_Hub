@@ -9,6 +9,15 @@
     scroll-margin-top: 3.55rem;
 }
 
+#Bird_Cat {
+    position: absolute;
+    pointer-events: none;
+    width: 45vw;
+    right: 2%;
+    transform: translateY(-50%) rotate(-5deg);
+    z-index: 3;
+}
+
 .Background_Decoration3 {
     position: absolute;
     inset: 0;
@@ -135,6 +144,11 @@
         padding: 1.5rem;
     }
 
+    #Bird_Cat {
+        max-width: 14rem;
+        bottom: 10%;
+    }
+
     .Background_Decoration3 {
         background-size: 1.5rem 1.5rem;
     }
@@ -169,7 +183,7 @@
     .More_Games_Link {
         padding: 1rem 1.5rem;
         margin-block: var(--Section_Padding);
-        font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+        font-size: clamp(1.3rem, 2.5vw, 1.6rem);
     }
 }
 
@@ -177,6 +191,11 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     #Other_Games {
         padding: var(--Section_Padding);
+    }
+
+    #Bird_Cat {
+        max-width: 16rem;
+        bottom: 7.5%;
     }
 
     .Background_Decoration3 {
@@ -223,6 +242,11 @@
         padding: 2.5rem;
     }
 
+    #Bird_Cat {
+        max-width: 19rem;
+        bottom: 6%;
+    }
+
     .Background_Decoration3 {
         background-size: 4rem 4rem;
     }
@@ -265,6 +289,11 @@
 @media (min-width: 1280px) and (max-width: 1599px) {
     #Other_Games {
         padding: 2.75rem;
+    }
+
+    #Bird_Cat {
+        max-width: 21rem;
+        bottom: 7%;
     }
 
     .Background_Decoration3 {
@@ -315,6 +344,11 @@
 @media (min-width: 1600px) {
     #Other_Games {
         padding: 3rem;
+    }
+
+    #Bird_Cat {
+        max-width: 24rem;
+        bottom: 7%;
     }
 
     .Background_Decoration3 {
