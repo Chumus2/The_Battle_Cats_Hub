@@ -12,12 +12,22 @@
     z-index: 1;
 }
 
-#Lizard_Cat {
+:where(#Lizard_Cat, #Titan_Cat) {
     position: absolute;
     pointer-events: none;
+    z-index: 2;
+}
+
+#Lizard_Cat {
     width: 25vw;
     right: 1.5%;
     transform: translateY(-50%) rotate(6deg);
+}
+
+#Titan_Cat {
+    width: 42vw;
+    left: -7%;
+    transform: translateY(-50%) rotate(-6deg) scaleX(-1);
 }
 
 .Background_Decoration5 {
@@ -64,6 +74,11 @@
         bottom: -15%;
     }
 
+    #Titan_Cat {
+        max-width: 15rem;
+        bottom: -24%;
+    }
+
     .Background_Decoration5 {
         background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.25rem, #780000 1.25rem, #780000 2.5rem);
     }
@@ -88,6 +103,11 @@
     #Lizard_Cat {
         max-width: 12rem;
         bottom: -20%;
+    }
+
+    #Titan_Cat {
+        max-width: 17.5rem;
+        bottom: -26%;
     }
 
     .Background_Decoration5 {
@@ -116,6 +136,11 @@
         bottom: -18.5%;
     }
 
+    #Titan_Cat {
+        max-width: 20rem;
+        bottom: -27%;
+    }
+
     .Background_Decoration5 {
         background: repeating-linear-gradient(45deg, #c1121f, #c1121f 1.75rem, #780000 1.75rem, #780000 3.25rem);
     }
@@ -139,6 +164,12 @@
     #Lizard_Cat {
         max-width: 14rem;
         bottom: -18.5%;
+    }
+
+    #Titan_Cat {
+        max-width: 24rem;
+        left: -4%;
+        bottom: -30%;
     }
 
     .Background_Decoration5 {
@@ -169,6 +200,12 @@
     #Lizard_Cat {
         max-width: 15rem;
         bottom: -17%;
+    }
+
+    #Titan_Cat {
+        max-width: 25rem;
+        left: -3%;
+        bottom: -28%;
     }
 
     .Background_Decoration5 {
