@@ -7,7 +7,9 @@
     position: relative;
     width: 100%;
     overflow: hidden;
+    background-color: rgb(247, 198, 63);
     scroll-margin-top: 4.7rem;
+    z-index: 1;
 }
 
 .Background_Decoration {
@@ -17,9 +19,8 @@
     inset: 0;
     z-index: -1;
     
-    background-image: var(--Dec_Background), var(--Dec_Background), var(--Dec_Base);
-    background-position: 0 0, calc(var(--Dec_Size) / 2) calc(var(--Dec_Size) / 2), center;
-    background-size: var(--Dec_Size) var(--Dec_Size), var(--Dec_Size) var(--Dec_Size), cover;
+    background-image: radial-gradient( rgb(247, 198, 63) 85%, rgba(196, 111, 0, 0.884) 90%,rgba(255, 136, 0, 0.884) 20%);
+    opacity: 0.6;
 }
 
 .Overview_Texts {
@@ -89,6 +90,11 @@
         padding-bottom: 2.25rem;
     }
 
+    .Background_Decoration {
+        background-position: center 10%;
+        background-size: 3rem 3rem;
+    }
+
     .Overview_Texts {
         padding: 1.5rem;
         gap: 2rem;
@@ -132,6 +138,11 @@
 @media (min-width: 768px) and (max-width: 1023px) {
     :root {
         --Dec_Size: 4.5rem;
+    }
+
+    .Background_Decoration {
+        background-position: center 10%;
+        background-size: 3.5rem 3.5rem;
     }
 
     #Overview {
@@ -182,6 +193,11 @@
         --Dec_Size: 4.75rem;
     }
 
+    .Background_Decoration {
+        background-position: center 50%;
+        background-size: 4rem 4rem;
+    }
+
     #Overview {
         padding-bottom: 3rem;
     }
@@ -229,6 +245,11 @@
 @media (min-width: 1280px) and (max-width: 1599px) {
     :root {
         --Dec_Size: 5rem;
+    }
+
+    .Background_Decoration {
+        background-position: center 25%;
+        background-size: 4.5rem 4.5rem;
     }
 
     #Overview {
@@ -283,6 +304,11 @@
 @media (min-width: 1600px) {
     :root {
         --Dec_Size: 6rem;
+    }
+
+    .Background_Decoration {
+        background-position: center 10%;
+        background-size: 5rem 5rem;
     }
 
     #Overview {

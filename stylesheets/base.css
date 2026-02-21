@@ -62,8 +62,6 @@ a {
     --Font_Title: "Tactic_Round_Exd_Bold";
 
     /* DECORATIONS */
-    --Dec_Size: 3.5rem;
-    --Dec_Background: radial-gradient(rgba(255, 147, 24, 0.884) 5%, rgb(247, 198, 63) 6%);
     --Dec_Base: linear-gradient(to bottom, #fff6d5 0%,#ffd27a 40%,#ff9f1c 100%);
 
     /* COLORS */
