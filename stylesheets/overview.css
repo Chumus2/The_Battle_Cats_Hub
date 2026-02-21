@@ -12,6 +12,32 @@
     z-index: 1;
 }
 
+:where(#Basic_Cat, #Tank_Cat, #Gross_Cat) {
+    position: absolute;
+    pointer-events: none;
+}
+
+#Basic_Cat {
+    width: 26vw;
+    right: 3%;
+    top: 32%;
+    transform: translateY(-50%) rotate(-7.5deg);
+}
+
+#Tank_Cat {
+    width: 23vw;
+    left: 4%;
+    bottom: 35%;
+    transform: translateY(50%) rotate(3deg);
+}
+
+#Gross_Cat {
+    width: 23vw;
+    right: 4%;
+    bottom: 9%;
+    transform: translateY(50%) rotate(-3deg);
+}
+
 .Background_Decoration {
     position: absolute;
     width: 100%;
@@ -90,8 +116,23 @@
         padding-bottom: 2.25rem;
     }
 
+    #Basic_Cat {
+        max-width: 9.5rem;
+        top: 32%;
+    }
+
+    #Tank_Cat {
+        max-width: 8.5rem;
+        bottom: 34.75%;
+    }
+
+    #Gross_Cat {
+        max-width: 7.5rem;
+        bottom: 9%;
+    }
+
     .Background_Decoration {
-        background-position: center 10%;
+        background-position: center 15%;
         background-size: 3rem 3rem;
     }
 
@@ -140,8 +181,23 @@
         --Dec_Size: 4.5rem;
     }
 
+    #Basic_Cat {
+        max-width: 9.5rem;
+        top: 30%;
+    }
+
+    #Tank_Cat {
+        max-width: 8.5rem;
+        bottom: 37.5%;
+    }
+
+    #Gross_Cat {
+        max-width: 7.5rem;
+        bottom: 9%;
+    }
+
     .Background_Decoration {
-        background-position: center 10%;
+        background-position: center 9%;
         background-size: 3.5rem 3.5rem;
     }
 
@@ -191,6 +247,21 @@
 @media (min-width: 1024px) and (max-width: 1279px) {
     :root {
         --Dec_Size: 4.75rem;
+    }
+
+    #Basic_Cat {
+        max-width: 10.5rem;
+        top: 30%;
+    }
+
+    #Tank_Cat {
+        max-width: 9.5rem;
+        bottom: 37.5%;
+    }
+
+    #Gross_Cat {
+        max-width: 9rem;
+        bottom: 9.5%;
     }
 
     .Background_Decoration {
@@ -247,8 +318,23 @@
         --Dec_Size: 5rem;
     }
 
+    #Basic_Cat {
+        max-width: 11rem;
+        top: 30%;
+    }
+
+    #Tank_Cat {
+        max-width: 10rem;
+        bottom: 37.5%;
+    }
+
+    #Gross_Cat {
+        max-width: 9.5rem;
+        bottom: 9.5%;
+    }
+
     .Background_Decoration {
-        background-position: center 25%;
+        background-position: center 23%;
         background-size: 4.5rem 4.5rem;
     }
 
@@ -304,6 +390,24 @@
 @media (min-width: 1600px) {
     :root {
         --Dec_Size: 6rem;
+    }
+
+    #Basic_Cat {
+        max-width: 12rem;
+        right: 5%;
+        top: 29.5%;
+    }
+
+    #Tank_Cat {
+        max-width: 11rem;
+        right: 5%;
+        bottom: 37%;
+    }
+
+    #Gross_Cat {
+        max-width: 10.5rem;
+        right: 5%;
+        bottom: 9%;
     }
 
     .Background_Decoration {

@@ -6,7 +6,9 @@
     align-items: center;
     width: 100%;
     overflow: hidden;
+    background-color: rgb(247, 198, 63);
     scroll-margin-top: 5rem;
+    z-index: 1;
 }
 
 .Trailer_Preview {
