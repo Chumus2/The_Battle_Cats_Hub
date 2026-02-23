@@ -38,7 +38,6 @@
 
 .Youtuber_Profile {
     flex: 0 0 auto;
-    transition: all 0.3s ease;
 }
 
 .Youtuber_Profile img {
@@ -232,9 +231,4 @@
 
 .Youtuber_Profile:hover {
     transform: scale(1.05);
-    animation: Border_Selected 0.3s none infinite;
-}
-
-.Youtuber_Profile:active {
-    transform: scale(0.95);
 }
