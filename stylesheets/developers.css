@@ -63,6 +63,7 @@
 .Developers_Gallery img {
     width: 50%;
     max-width: 17.5em;
+    transition: transform 0.3s ease;
 }
 
 /* || PHONES || */
@@ -250,4 +251,8 @@
 .Developers_Texts h2:hover {
     border-bottom-color: rgba(0, 0, 0, 0.493);
     transform: scale(1.05);
+}
+
+.Developers_Gallery img:hover {
+    transform: scale(1.075);
 }
