@@ -55,6 +55,7 @@
 .Youtubers_Gallery_Buttons button {
     max-width: 5em; 
     max-height: 5em;
+    transition: transform 0.3s ease;
 }
 
 /* || PHONES || */
@@ -227,4 +228,12 @@
 #Youtubers h2:hover {
     border-bottom-color: rgba(0, 0, 0, 0.493);
     transform: scale(1.075);
+}
+
+.Youtubers_Gallery_Buttons button:hover {
+    transform: scale(1.05);
+}
+
+.Youtubers_Gallery_Buttons button:active {
+    transform: scale(0.95);
 }

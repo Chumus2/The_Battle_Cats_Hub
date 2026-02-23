@@ -88,7 +88,8 @@
     max-width: 6.5em; 
     height: 15vw;
     max-height: 6.5em;
-    transition: transform 0.2s ease;
+    transition: transform 0.3s ease;
+    z-index: 1;
 }
 
 .Games_Gallery {
