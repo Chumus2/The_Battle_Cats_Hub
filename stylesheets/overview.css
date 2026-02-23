@@ -15,6 +15,7 @@
 :where(#Basic_Cat, #Tank_Cat, #Gross_Cat) {
     position: absolute;
     pointer-events: none;
+    z-index: 2;
 }
 
 #Basic_Cat {
@@ -87,6 +88,7 @@
     border: 3px solid rgba(0, 0, 0, 0.26);
     border-radius: 0.75rem;
     box-shadow: var(--Shadow_Card);
+    transition: all 0.3s ease;
 }
 
 .Downloads {
@@ -461,5 +463,26 @@
 
     .Download_Button { 
         width: clamp(15rem, 13vw, 20rem);
+    }
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+.Overview_Textbox > img:hover {
+    transform: scale(1.05) rotate(1.5deg);
+    animation: Border_Selected 0.2s none infinite;
+}
+
+@keyframes Border_Selected {
+    0% {
+        border-color: rgb(255, 222, 36);
+    }
+
+    50% {
+        border-color: rgb(249, 62, 255);
+    }
+
+    100% {
+        border-color: rgb(255, 222, 36);
     }
 }
