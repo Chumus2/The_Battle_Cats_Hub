@@ -99,3 +99,11 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
+
+/* || INTERACTIONS / HOVERS || */
+@keyframes Border_Selected {
+    0% { border-color: rgb(255, 204, 64); }
+    50% { border-color: rgb(255, 58, 206); }
+    100% { border-color: rgb(255, 204, 64); }
+}

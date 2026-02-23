@@ -477,9 +477,3 @@
     border-bottom-color: rgba(0, 0, 0, 0.493);
     transform: scale(1.075);
 }
-
-@keyframes Border_Selected {
-    0% { border-color: rgb(255, 204, 64); }
-    50% { border-color: rgb(255, 58, 206); }
-    100% { border-color: rgb(255, 204, 64); }
-}

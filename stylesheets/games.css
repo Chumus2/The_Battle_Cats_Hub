@@ -37,6 +37,8 @@
     font-family: var(--Font_Title);
     border-bottom: var(--Border_Light);
     text-align: center;
+    transition: all 0.3s ease;
+    z-index: 1;
 }
 
 .More_Games_Link {
@@ -86,6 +88,7 @@
     max-width: 6.5em; 
     height: 15vw;
     max-height: 6.5em;
+    transition: transform 0.2s ease;
 }
 
 .Games_Gallery {
@@ -414,4 +417,17 @@
     transition: all 0.15s;
     box-shadow: none;
     transform: scale(0.98);
+}
+
+#Other_Games h2:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.493);
+    transform: scale(1.075);
+}
+
+.Games_Gallery_Buttons button:hover {
+    transform: scale(1.05);
+}
+
+.Games_Gallery_Buttons button:active {
+    transform: scale(0.95);
 }
