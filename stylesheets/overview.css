@@ -88,7 +88,7 @@
     border: 3px solid rgba(0, 0, 0, 0.26);
     border-radius: 0.75rem;
     box-shadow: var(--Shadow_Card);
-    transition: all 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .Downloads {
@@ -468,21 +468,21 @@
 
 
 /* || INTERACTIONS / HOVERS || */
-.Overview_Textbox > img:hover {
+.Overview_Textbox img:hover {
     transform: scale(1.05) rotate(1.5deg);
-    animation: Border_Selected 0.2s none infinite;
+    animation: Border_Selected 0.3s none infinite;
 }
 
 @keyframes Border_Selected {
     0% {
-        border-color: rgb(255, 222, 36);
+        border-color: rgb(255, 204, 64);
     }
 
     50% {
-        border-color: rgb(249, 62, 255);
+        border-color: rgb(255, 58, 206);
     }
 
     100% {
-        border-color: rgb(255, 222, 36);
+        border-color: rgb(255, 204, 64);
     }
 }
