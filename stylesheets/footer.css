@@ -23,11 +23,19 @@ footer {
     align-items: center;
 }
 
+.Footer_Links a {
+    transition: transform 0.3s ease;
+}
+
 .Copyright_Textbox {
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: underline;
+}
+
+.Copyright_Textbox a {
+    transition: transform 0.3s ease;
 }
 
 /* || PHONES || */
@@ -197,4 +205,14 @@ footer {
     footer > h3 {
         font-size: clamp(1.75rem, 1.3vw, 2.1rem);
     }
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+.Footer_Links a:hover {
+    transform: scale(1.05);
+}
+
+.Copyright_Textbox a:hover {
+    transform: scale(1.075);
 }
