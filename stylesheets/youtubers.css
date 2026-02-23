@@ -27,6 +27,7 @@
 #Youtubers h2 {
     font-family: var(--Font_Title);
     border-bottom: var(--Border_Light);
+    transition: all 0.3s ease;
 }
 
 .Youtubers_Gallery {
@@ -37,6 +38,7 @@
 
 .Youtuber_Profile {
     flex: 0 0 auto;
+    transition: all 0.3s ease;
 }
 
 .Youtuber_Profile img {
@@ -219,4 +221,20 @@
         top: 60%;
         padding: 0.75rem 1.25rem;
     } 
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+#Youtubers h2:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.493);
+    transform: scale(1.075);
+}
+
+.Youtuber_Profile:hover {
+    transform: scale(1.05);
+    animation: Border_Selected 0.3s none infinite;
+}
+
+.Youtuber_Profile:active {
+    transform: scale(0.95);
 }
