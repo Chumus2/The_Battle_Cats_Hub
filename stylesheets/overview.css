@@ -14,7 +14,6 @@
 
 :where(#Basic_Cat, #Tank_Cat, #Gross_Cat) {
     position: absolute;
-    pointer-events: none;
     z-index: 2;
 }
 
@@ -67,6 +66,7 @@
 .Overview_Textbox h2 {
     font-family: var(--Font_Title);
     border-bottom: var(--Border_Light);
+    transition: all 0.3s ease;
 }
 
 .Overview_Textbox ul {
@@ -473,16 +473,13 @@
     animation: Border_Selected 0.3s none infinite;
 }
 
+.Overview_Textbox h2:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.493);
+    transform: scale(1.075);
+}
+
 @keyframes Border_Selected {
-    0% {
-        border-color: rgb(255, 204, 64);
-    }
-
-    50% {
-        border-color: rgb(255, 58, 206);
-    }
-
-    100% {
-        border-color: rgb(255, 204, 64);
-    }
+    0% { border-color: rgb(255, 204, 64); }
+    50% { border-color: rgb(255, 58, 206); }
+    100% { border-color: rgb(255, 204, 64); }
 }
