@@ -37,6 +37,7 @@
 .Developers_Texts h2 {
     font-family: var(--Font_Title);
     border-bottom: var(--Border_Light);
+    transition: all 0.3s ease;
 }
 
 .Developers_Textbox {
@@ -242,4 +243,11 @@
     .Developers_Textbox p:not(:last-of-type) {
         border-bottom: var(--Border_Heavy);
     }
+}
+
+
+/* || INTERACTIONS / HOVERS || */
+.Developers_Texts h2:hover {
+    border-bottom-color: rgba(0, 0, 0, 0.493);
+    transform: scale(1.05);
 }
